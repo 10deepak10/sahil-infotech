@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import "./Contact.scss";
 
+type FormFields = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  message: string;
+};
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -9,13 +17,7 @@ export default function Contact() {
     phone: "",
     message: "",
   });
-  type FormFields = {
-    firstName: string;
-    lastName: string;
-    email: string;
-    phone: string;
-    message: string;
-  };
+
   const [errors, setErrors] = useState<FormFields>({
     firstName: "",
     lastName: "",
