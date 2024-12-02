@@ -19,7 +19,7 @@ const Home = () => {
     <CTA/>
     <Services/>
     <Experties/>
-    <Portfolio/>
+    {/* <Portfolio/> */}
     <Footer/>
     </>
   )
