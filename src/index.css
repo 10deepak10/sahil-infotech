@@ -84,3 +84,18 @@ body {
 .bold {
   font-weight: 600;
 }
+
+.quote-btn{
+      background: #091678;
+      border: 1px solid transparent;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      height: 40px;
+      width: 122px;
+      cursor: pointer;
+}
