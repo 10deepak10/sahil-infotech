@@ -1,16 +1,16 @@
-import './Header.scss'
+import { Link } from 'react-router-dom';
+import './Header.scss';
 
 const Header = () => {
   return (
     <header className='d-flex'>
       <img className='logo' src="media/logo.png" alt="logo" width="172" height="54"/>
       <div className='action-container'>
-        <ul>
-          <li>Home</li>
-          <li>Our Portfolio</li>
-          <li>contact</li>
+        <ul className="gap-20">
+          <Link to="/">Home</Link>
+          <Link to="/contact">Contact</Link>
         </ul>
-          <ul>
+          <ul className="gap-12">
           <li className='call'> 
             <img src="media/icons/call.svg" alt="call" width="24" height="24" />
             </li>
