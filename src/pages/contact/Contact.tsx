@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import "aos/dist/aos.css";
 import "./Contact.scss";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 type FormFields = {
   firstName: string;
@@ -10,6 +13,13 @@ type FormFields = {
 };
 
 export default function Contact() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: false,
+    });
+  }, []);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -83,7 +93,7 @@ export default function Contact() {
     <div className="container contact-main-container gap-80 py-80">
       <div className="flex gap-40">
         <div className="flex-col gap-30 contact-card-container">
-          <div className="contact-card flex">
+          <div className="contact-card flex" data-aos="fade-right">
             <div className="icon-circle">
               <img
                 src="media/icons/sms.svg"
@@ -97,7 +107,7 @@ export default function Contact() {
               <p className="description">info@demo.com</p>
             </div>
           </div>
-          <div className="contact-card flex">
+          <div className="contact-card flex" data-aos="fade-right">
             <div className="icon-circle">
               <img
                 src="media/icons/call.svg"
@@ -111,7 +121,7 @@ export default function Contact() {
               <p className="description">+91 987635241</p>
             </div>
           </div>
-          <div className="contact-card flex">
+          <div className="contact-card flex" data-aos="fade-right">
             <div className="icon-circle">
               <img
                 src="media/icons/location.svg"
@@ -129,7 +139,11 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <form className="flex-col contact-form" onSubmit={handleSubmit}>
+        <form
+          className="flex-col contact-form"
+          onSubmit={handleSubmit}
+          data-aos="fade-left"
+        >
           <h3 className="heading6">Send Message</h3>
 
           <div className="contact-field">
@@ -230,7 +244,7 @@ export default function Contact() {
       </div>
 
       {/* Google Map Embed */}
-      <div className="map-container">
+      <div className="map-container" data-aos="fade-up">
         <iframe
           title="Google Map Location"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093156!2d144.9556518157605!3d-37.81732397975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce8b0!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1631569862345!5m2!1sen!2sus"

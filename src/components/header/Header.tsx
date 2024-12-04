@@ -1,9 +1,19 @@
 import { Link } from 'react-router-dom';
+import AOS from "aos";
+import "aos/dist/aos.css";
 import './Header.scss';
+import { useEffect } from 'react';
 
 const Header = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: false,
+    });
+  }, []);
   return (
-    <header className='d-flex'>
+    <header className='d-flex' data-aos="fade-down">
       <img className='logo' src="media/logo.png" alt="logo" width="172" height="54"/>
       <div className='action-container'>
         <ul className="gap-20">
