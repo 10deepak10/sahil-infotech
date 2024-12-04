@@ -86,7 +86,7 @@ export default function Contact() {
           <div className="contact-card flex">
             <div className="icon-circle">
               <img
-                src="media/icons/location.svg"
+                src="media/icons/sms.svg"
                 alt="call"
                 width="24"
                 height="24"
@@ -100,7 +100,7 @@ export default function Contact() {
           <div className="contact-card flex">
             <div className="icon-circle">
               <img
-                src="media/icons/location.svg"
+                src="media/icons/call.svg"
                 alt="call"
                 width="24"
                 height="24"

@@ -27,6 +27,7 @@ body {
 
 .flex {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .flex-col {
@@ -123,4 +124,37 @@ body {
   height: 40px;
   width: 122px;
   cursor: pointer;
+}
+
+.cta-btn {
+  padding: 16px 40px;
+  background-color: #091678;
+  color: #fff;
+  max-width: fit-content;
+  position: relative;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+      background-color: #0A2438;
+      transform: scale(.95);
+  }
+}
+
+.radius-full {
+  border-radius: 99px;
+}
+
+
+
+@media screen and (max-width:767px) {
+  .heading6 {
+    font-size: 16px;
+  }
+  .cta-btn {
+    padding: 8px 20px;
+  }
+  .f-18 {
+    font-size: 12px;
+  }
 }

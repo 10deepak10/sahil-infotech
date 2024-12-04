@@ -7,6 +7,8 @@
         gap: 20px;
         box-shadow: 0px 2px 28px 0px #00000014;
         max-width: 500px;
+        flex-wrap: nowrap;
+
 
         .icon-circle {
             display: flex;
@@ -30,8 +32,7 @@
             .description {
                 font-size: 18px;
                 font-weight: 400;
-                line-height: 27px;
-
+                line-height: 130%;
             }
         }
 
@@ -81,9 +82,10 @@
                     &:focus {
                         border-color: #1E1F21;
                     }
+
                     &.error-border {
                         border-color: #DA0505;
-                      }
+                    }
                 }
 
                 textarea {
@@ -119,22 +121,62 @@
 }
 
 
+@media (max-width: 767px) {
 
-.cta-btn {
-    padding: 16px 40px;
-    background-color: #091678;
-    color: #fff;
-    max-width: fit-content;
-    position: relative;
-    transition: all .3s ease-in-out;
-    cursor: pointer;
+    .contact-card-container .contact-card {
+        padding: 16px 24px;
+        gap: 10px;
 
-    &:hover {
-        background-color: #0A2438;
-        transform: scale(.95);
+        .icon-circle {
+            height: 42px;
+            width: 42px;
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        .info {
+            gap: 4px;
+
+            .description {
+                font-size: 12px;
+
+            }
+        }
+
     }
-}
 
-.radius-full {
-    border-radius: 99px;
+    .contact-form {
+        padding: 24px;
+        gap: 24px;
+
+        .contact-field {
+            gap: 16px;
+
+            .field-section {
+                gap: 16px;
+
+                .input-filed {
+
+                    input,
+                    textarea {
+                        padding: 8px 10px;
+                        font-size: 12px;
+                        line-height: 124%;
+
+                    }
+
+                    .error {
+                        font-size: 12px;
+                        line-height: 124%;
+
+                    }
+                }
+
+            }
+
+        }
+    }
 }
