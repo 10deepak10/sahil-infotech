@@ -9,12 +9,12 @@ export const Hero = () => {
       <button className='quote-btn'>Get Quote</button>
       </div>
       <div className='right-side'>
-        <img src="../../../../hand.png" alt="hand" width="58" height="58" />
+        <img src="../../../../media/hand.png" alt="hand" width="58" height="58" />
         <p>You deserve the best.<br/>We specialize in delivering tailored<br/> software solutions and DevOps<br/> outsourcing services.</p>
         <div className='stats'>
           <div className='stat-item'>
             <div className='item'>
-              <img src="../../../../user.png" alt="user" />
+              <img src="../../../../media/icons/user.png" alt="user" />
               02
             </div>
             <p>Year Experience</p>
@@ -22,7 +22,7 @@ export const Hero = () => {
           <div className='line'></div>
           <div className='stat-item'>
           <div className='item'>
-          <img src="../../../../briefcase.png" alt="briefcase" />
+          <img src="../../../../media/icons/briefcase.png" alt="briefcase" />
           50 +
           </div>
           <p>Project Complete</p>
