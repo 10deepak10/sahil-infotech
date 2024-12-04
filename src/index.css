@@ -162,4 +162,8 @@ body {
   .f-18 {
     font-size: 12px;
   }
+
+  .gap-80 {
+    gap: 40px;
+  }
 }

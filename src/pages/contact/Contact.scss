@@ -36,10 +36,6 @@
             }
         }
 
-        // &:hover{
-
-        // }
-
     }
 }
 
@@ -122,6 +118,10 @@
 
 
 @media (max-width: 767px) {
+    .contact-main-container{
+        padding: 24px;
+        box-sizing: border-box;
+    }
 
     .contact-card-container .contact-card {
         padding: 16px 24px;
@@ -178,5 +178,8 @@
             }
 
         }
+    }
+    .map-container{
+        padding: 16px;
     }
 }
