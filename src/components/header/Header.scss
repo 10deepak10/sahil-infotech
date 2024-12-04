@@ -5,7 +5,7 @@ header{
     height: 65px;
     background: #ffffff;
     border-bottom: 1px solid  #eaecee;
-    padding: 0 64px;
+    padding: 0 100px;
     .log{
         width: 172px;
         height: auto;
@@ -14,7 +14,7 @@ header{
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 60px;
+        gap: 40px;
         ul{
             list-style-type: none;
             display: flex;
@@ -28,7 +28,7 @@ header{
                 transition: all 0.3s ease-in-out;
                 &:hover{
                     color: #091678;
-                    font-weight: 500;
+                    font-weight: 600;
                     transition: 0.3s ease-in-out;
                     transform: scale(1.05);
                 }
@@ -54,13 +54,13 @@ header{
                         justify-content: center;
                         border-radius: 12px;
                         height: 40px;
-                        width: 122px;
+                        width: 100px;
                         cursor: pointer;
                     }
                 }
             }
             &:first-child{
-                width: 290px;
+                width: 235px;
                 justify-content: space-between;
             }
             &:nth-child(2){

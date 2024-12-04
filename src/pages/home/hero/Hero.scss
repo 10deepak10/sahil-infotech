@@ -2,13 +2,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 64px;
+    padding: 0 100px;
     background: #F7FBFD;
     background-size: cover;
     background-position: center;
     width: 100vw;
     height: 350px;
     box-sizing: border-box;
+    position: relative;
   .left-side{
     display: flex;
     flex-direction: column;
@@ -32,9 +33,11 @@
     height: auto;
     background: #ffffff;
     padding: 22px;
+    border-radius: 12px;
+    z-index: 1;
     img{
         width: 40px;
-        height: 40px;
+        height: 35px;
     }
     p{
         color: #454748;
@@ -57,7 +60,7 @@
                 gap: 6px;
                 color: #091678;
                 font-size: 18px;
-                font-weight: 500;
+                font-weight: 600;
                 img{
                     width: 24px;
                     height: 24px;
@@ -71,8 +74,20 @@
         .line{
             height: 50px;
             width: 1px;
-            background: #454748;
+            background: #e8e8e8;
         }
     }
+  }
+  &::before{
+    position: absolute;
+    content: "";
+    background-image: url(../../../../public/semi-circle-bg.png);
+    background-repeat: no-repeat;
+    height: 265px;
+    width: 650px;
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    right: 0;
   }
 }
