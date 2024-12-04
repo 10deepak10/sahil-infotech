@@ -31,7 +31,7 @@ const Experties = () => {
 
 
   return (
-    <div className="flex container">
+    <div className="flex container experties-container strech-content">
       <h2>
         Our Expertise in Various Technologies
         <span>
