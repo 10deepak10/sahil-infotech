@@ -1,38 +1,47 @@
-header{
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 65px;
     background: #ffffff;
-    border-bottom: 1px solid  #eaecee;
+    border-bottom: 1px solid #eaecee;
     padding: 0 100px;
-    .log{
+
+    .log {
         width: 172px;
         height: auto;
     }
-    .action-container{
+
+    .action-container {
+        flex: 1 0 1px;
         display: flex;
-        justify-content: center;
+        justify-content: end;
         align-items: center;
         gap: 40px;
-        ul{
+
+        ul {
             list-style-type: none;
             display: flex;
             align-items: center;
-            li{
+
+            li,
+            a {
+                text-decoration: none;
                 font-size: 14px;
                 font-weight: 400;
                 line-height: 140%;
                 color: #383838;
-                cursor: pointer;
                 transition: all 0.3s ease-in-out;
-                &:hover{
+                font-weight: 600;
+
+                &:hover {
                     color: #091678;
-                    font-weight: 600;
                     transition: 0.3s ease-in-out;
                     transform: scale(1.05);
                 }
-                &.call,&.sms{
+
+                &.call,
+                &.sms {
                     width: 40px;
                     height: 40px;
                     border-radius: 12px;
@@ -42,8 +51,9 @@ header{
                     align-items: center;
                     justify-content: center;
                 }
-                &.quote-btn{
-                    button{
+
+                &.quote-btn {
+                    button {
                         background: #091678;
                         border: 1px solid transparent;
                         color: #ffffff;
@@ -59,14 +69,15 @@ header{
                     }
                 }
             }
-            &:first-child{
-                width: 235px;
-                justify-content: space-between;
-            }
-            &:nth-child(2){
-                gap: 14px;
+
+            a {
+                opacity: .9;
+
+                &:hover {
+                    opacity: 1;
+                }
             }
         }
     }
- 
+
 }
