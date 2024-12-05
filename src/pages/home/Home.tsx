@@ -5,6 +5,7 @@ import Experties from './Experties/Experties'
 import './Home.scss'
 import Aboutus from './aboutus/Aboutus'
 import { Hero } from './hero/Hero'
+import IndustriesSwiper from './industry/IndustriesSwiper'
 import Process from './process/Process'
 import Services from './services/Services'
 
@@ -18,6 +19,7 @@ const Home = () => {
     <Services/>
     <Experties/>
     {/* <Portfolio/> */}
+    <IndustriesSwiper/>
     <Footer/>
     </>
   )
