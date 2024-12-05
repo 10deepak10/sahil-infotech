@@ -1,7 +1,16 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './Experties.scss';
+import AOS from "aos";
+
 
 const Experties = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: false,
+    });
+  }, []);
 
   const [activeTab, setActiveTab] = useState("Frontend");
 
@@ -31,7 +40,7 @@ const Experties = () => {
 
 
   return (
-    <div className="flex container experties-container strech-content">
+    <div className="flex container experties-container strech-content" data-aos="fade-up">
       <h2>
         Our Expertise in Various Technologies
         <span>
