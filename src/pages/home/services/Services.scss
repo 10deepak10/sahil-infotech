@@ -1,0 +1,24 @@
+.services_wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+  
+    .services_card {
+      padding: 34px;
+      box-shadow: 0px 2px 13px 0px #13141517;
+      border-radius: 4px;
+      align-items: flex-start;
+  
+      img {
+        object-fit: contain;
+        box-sizing: border-box;
+        width: 74px;
+        height: 74px;
+        padding: 16px;
+        background: aliceblue;
+        border-radius: 99px;
+        overflow: inherit;
+      }
+    }
+  }

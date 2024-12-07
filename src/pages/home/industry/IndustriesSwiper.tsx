@@ -23,7 +23,7 @@ const IndustriesSwiper = () => {
         <h2>Industries We Serve</h2>
         <p>Explore the industries we cater to with tailored solutions.</p>
       </div>
-      <div className="swiper-container" data-aos="fade-up" data-aos-delay="100">
+      <div className="swiper-container" data-aos="fade-up" data-aos-delay="50">
         <Swiper
           slidesPerView={5}
           spaceBetween={20}
