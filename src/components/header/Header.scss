@@ -6,6 +6,9 @@ header {
     background: #ffffff;
     border-bottom: 1px solid #eaecee;
     padding: 0 100px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 
     .log {
         width: 172px;
@@ -34,7 +37,7 @@ header {
                 transition: all 0.3s ease-in-out;
                 font-weight: 600;
 
-                &:hover {
+                &:hover, &.active {
                     color: #091678;
                     transition: 0.3s ease-in-out;
                     transform: scale(1.05);

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import "aos/dist/aos.css";
 import './Header.scss';
 
@@ -9,8 +9,18 @@ const Header = () => {
       <img className='logo' src="media/logo.png" alt="logo" width="172" height="54"/>
       <div className='action-container'>
         <ul className="gap-20">
-          <Link to="/">Home</Link>
-          <Link to="/contact">Contact</Link>
+        <NavLink 
+              to="/" 
+              className={({ isActive }) => (isActive ? 'active' : '')}
+            >
+              Home
+            </NavLink>
+            <NavLink 
+              to="/contact" 
+              className={({ isActive }) => (isActive ? 'active' : '')}
+            >
+              Contact
+            </NavLink>
         </ul>
           <ul className="gap-12">
           <li className='call'> 
