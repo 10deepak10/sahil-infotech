@@ -1,0 +1,17 @@
+.eperience_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .container{
+        flex-direction: row;
+        justify-content: space-between;
+        img{
+            width: auto;
+            height: 60px;
+        }
+        img.logo{
+            width: 134px;
+        }
+    }
+}

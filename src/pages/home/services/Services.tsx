@@ -47,7 +47,7 @@ const Services = () => {
     // Add more projects as needed
   ];
   return (
-    <div className="container text-center gap-50 py-80">
+    <div className="container text-center gap-50 py-40">
       <div className="title flex-col gap-16" data-aos="fade-up">
         <h3 className="heading3">Our Core Services</h3>
         <p className="text">

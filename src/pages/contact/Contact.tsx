@@ -90,7 +90,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="container contact-main-container gap-80 py-80">
+    <div className="container contact-main-container gap-80 py-40">
       <div className="flex gap-40">
         <div className="flex-col gap-30 contact-card-container">
           <div className="contact-card flex" data-aos="fade-right">

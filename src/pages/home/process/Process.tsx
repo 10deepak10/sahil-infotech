@@ -58,7 +58,8 @@ const Process = () => {
   ];
 
   return (
-    <div className="container text-center gap-50 py-80">
+    <div className="process_container">
+ <div className="container text-center gap-50 py-40">
       <div className="title flex-col gap-16" data-aos="fade-up">
         <h3 className="heading3">Our Core process</h3>
         <p className="text">
@@ -87,6 +88,8 @@ const Process = () => {
         )}
       </div>
     </div>
+    </div>
+   
   );
 };
 

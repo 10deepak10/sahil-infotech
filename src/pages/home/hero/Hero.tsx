@@ -23,7 +23,7 @@ export const Hero = () => {
         <div className='stats'>
           <div className='stat-item'>
             <div className='item'>
-              <img src="../../../../media/icons/user.png" alt="user" />
+              <img src="../../../../media/icons/user.svg" alt="user" />
               02
             </div>
             <p>Year Experience</p>
@@ -31,7 +31,7 @@ export const Hero = () => {
           <div className='line'></div>
           <div className='stat-item'>
           <div className='item'>
-          <img src="../../../../media/icons/briefcase.png" alt="briefcase" />
+          <img src="../../../../media/icons/briefcase.svg" alt="briefcase" />
           50 +
           </div>
           <p>Project Complete</p>

@@ -15,6 +15,9 @@ body {
   margin: 0;
   padding: 0;
 }
+.theme-text{
+  color:#091678 !important;
+}
 
 .container {
   width: 100%;
@@ -66,6 +69,10 @@ body {
 
 
 /* padding */
+.py-40 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 .py-80 {
   padding-top: 80px;
   padding-bottom: 80px;
@@ -74,12 +81,14 @@ body {
 /* typography  */
 
 .heading3 {
+  color:#383838;
   font-size: 38px;
   font-weight: 600;
   line-height: 140%;
 }
 
 .heading6 {
+  color:#383838;
   font-size: 24px;
   font-weight: 600;
   line-height: 140%;
