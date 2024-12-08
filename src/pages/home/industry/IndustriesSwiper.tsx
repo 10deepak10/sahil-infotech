@@ -28,8 +28,9 @@ const IndustriesSwiper = () => {
            slidesPerView={5}
            spaceBetween={20}
            loop={true}
+           speed={10000}
            autoplay={{
-             delay: 3000,
+             delay: 0,
              disableOnInteraction: false,
            }}
            pagination={{
