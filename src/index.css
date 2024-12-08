@@ -141,6 +141,8 @@ body {
   height: 40px;
   width: 122px;
   cursor: pointer;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .cta-btn {
