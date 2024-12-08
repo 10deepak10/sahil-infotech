@@ -1,0 +1,40 @@
+.process_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+
+  .process_card {
+    display: block;
+    width: 18%;
+    padding: 34px;
+    box-shadow: 0px 2px 13px 0px #13141517;
+    border-radius: 4px;
+
+    img {
+      object-fit: contain;
+      box-sizing: border-box;
+      width: 74px;
+      height: 74px;
+      padding: 16px;
+      background: aliceblue;
+      border-radius: 99px;
+      overflow: inherit;
+    }
+  }
+  .card-flow {
+    display: flex;
+    align-items: center;
+    img {
+      object-fit: contain;
+      opacity: 0.25;
+    }
+  }
+}
+.align-start {
+  align-items: flex-start !important;
+  img{
+    height: 125px;
+  }
+}
