@@ -31,7 +31,7 @@ const Process = () => {
       description:
         "With the highly skilled designer and developer they meet the criteria of UX/UI Software and we refer you, linux vps hosting india server provider in india development, API Integrations, Backend development, Frontend development (Angular, React, Value, Js)etc. with excellent problem solvers that will add value to your organization.",
     },
-  
+
     {
       id: 6,
       title: "Marketing Recommendation",
@@ -53,43 +53,45 @@ const Process = () => {
     {
       id: 9,
       img: "/media/images/arrow-bottom.png",
-    }
+    },
     // Add more projects as needed
   ];
 
   return (
     <div className="process_container">
- <div className="container text-center gap-50 py-40">
-      <div className="title flex-col gap-16" data-aos="fade-up">
-        <h3 className="heading3">Our Core process</h3>
-        <p className="text">
-          m ipsum odor amet, consectetuer adipiscing elit. Arcu sed vestibulum
-          sit sit hendrerit cras in potenti
-        </p>
-      </div>
-      <div className="process_wrapper" data-aos="fade-up" data-aos-delay="50">
-        {ourProcess.map((item) =>
-          item.title ? (
-            <div key={item.id} className="process_card flex-col gap-16">
-              <img src={item.img} alt={item.title} height={100} width={100} />
-              <h4 className="text f-18 bold">{item.title}</h4>
-              <p className="text">{item.description}</p>
-            </div>
-          ) : (
-            <div key={item.id} className={ item.id == 9 ? 'card-flow align-start':'card-flow'}>
-              <img
-                src={item.img}
-                alt="Default placeholder"
-                height={100}
-                width={100}
-              />
-            </div>
-          )
-        )}
+      <div className="container text-center gap-50 py-40">
+        <div className="title flex-col gap-16" data-aos="fade-up">
+          <h3 className="heading3">Our Core process</h3>
+          <p className="sub-title">
+            m ipsum odor amet, consectetuer adipiscing elit. Arcu sed vestibulum
+            sit sit hendrerit cras in potenti
+          </p>
+        </div>
+        <div className="process_wrapper" data-aos="fade-up" data-aos-delay="50">
+          {ourProcess.map((item) =>
+            item.title ? (
+              <div key={item.id} className="process_card flex-col gap-16">
+                <img src={item.img} alt={item.title} height={100} width={100} />
+                <h4 className="text f-18 bold">{item.title}</h4>
+                <p className="text">{item.description}</p>
+              </div>
+            ) : (
+              <div
+                key={item.id}
+                className={item.id == 9 ? "card-flow align-start" : "card-flow"}
+              >
+                <img
+                  src={item.img}
+                  alt="Default placeholder"
+                  height={100}
+                  width={100}
+                />
+              </div>
+            )
+          )}
+        </div>
       </div>
     </div>
-    </div>
-   
   );
 };
 

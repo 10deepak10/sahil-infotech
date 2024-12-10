@@ -9,8 +9,8 @@ const Experience = () => {
           <span className="heading3 theme-text">Experience & Trust</span>
         </div>
 
-        <div className="flex gap-20" data-aos="flip-up">
-          <div className="flex-col gap-12">
+        <div className="flex gap-20 info_section" data-aos="flip-up">
+          <div className="flex-col gap-12 align-center">
             <img
               className="logo"
               src="/media/icons/upwork-img.svg"
@@ -19,17 +19,17 @@ const Experience = () => {
             <span className="count">100% Job Success</span>
           </div>
           <hr />
-          <div className="flex-col gap-12">
+          <div className="flex-col gap-12 align-center">
             <img src="/media/icons/com-project.svg" alt="upwork" />
             <span className="count">50+ Project Completed</span>
           </div>
           <hr />
-          <div className="flex-col gap-12">
+          <div className="flex-col gap-12 align-center">
             <img src="/media/icons/briefcase.svg" alt="upwork" />
             <span className="count">5+ Years Of Experience</span>
           </div>
           <hr />
-          <div className="flex-col gap-12">
+          <div className="flex-col gap-12 align-center">
             <img src="/media/icons/user.svg" alt="upwork" />
             <span className="count">12+ Experts Team</span>
           </div>

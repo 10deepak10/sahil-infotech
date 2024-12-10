@@ -1,4 +1,4 @@
-.process_container{
+.process_container {
   width: 100%;
   background-color: #F7FBFD;
 }
@@ -9,12 +9,17 @@
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
+
   .process_card {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     width: 18%;
     padding: 34px;
     box-shadow: 0px 2px 13px 0px #13141517;
     border-radius: 4px;
+    background-color: #fff;
 
     img {
       object-fit: contain;
@@ -27,18 +32,50 @@
       overflow: inherit;
     }
   }
+
   .card-flow {
     display: flex;
     align-items: center;
+
     img {
       object-fit: contain;
       opacity: 0.25;
     }
   }
 }
+
 .align-start {
   align-items: flex-start !important;
-  img{
+
+  img {
     height: 125px;
   }
+}
+
+@media screen and (max-width:767px) {
+
+  .heading3 {
+    font-size: 26px;
+  }
+
+  .process_container {
+    box-sizing: border-box;
+    padding: 16px;
+  }
+
+  .process_wrapper {
+    .process_card {
+      width: unset;
+
+      img {
+        width: 64px;
+        height: 64px;
+      }
+    }
+
+    .card-flow {
+      display: none;
+    }
+  }
+
 }
