@@ -97,4 +97,16 @@
         }
 
     }
+
+    @media(max-width: 767px){
+        padding: 20px 15px;
+        h2{
+            font-size: 28px;
+            text-align: center;
+            span{
+                font-size: 14px;
+            }
+        }
+
+    }
 }

@@ -14,4 +14,10 @@
         color: #091678;
         margin-top: 20px;
     }
+    @media (max-width: 767px) {
+        padding: 20px 15px;
+        h2{
+            font-size: 28px;
+        }
+    }
 }

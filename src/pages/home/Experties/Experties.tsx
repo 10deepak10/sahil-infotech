@@ -17,8 +17,6 @@ const Experties = () => {
   const content: {
     Frontend: string[];
     Backend: string[];
-    "CMS/E-commerce": string;
-    "UI/UX": string;
     Mobile: string[];
   } = {
     Frontend: [
@@ -33,8 +31,6 @@ const Experties = () => {
       "swift.jpg",
     ],
     Backend: ["asp.jpg", "dotnet.jpg", "javascript.jpg", "nodejs.jpg","php.jpg", "laravel.jpg"],
-    "CMS/E-commerce": "CMS/E-commerce",
-    "UI/UX": "UI/UX",
     Mobile: ["android.jpg", "ios.jpg", "flutter.jpg"],
   };
 

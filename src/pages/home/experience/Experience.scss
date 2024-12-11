@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    box-sizing: border-box;
 
     .container {
         flex-direction: row;
@@ -21,7 +22,7 @@
 
 @media screen and (max-width:767px) {
     .eperience_container {
-        padding: 16px;
+        
 
         .container {
             flex-wrap: wrap;
@@ -46,7 +47,7 @@
             }
 
             .count {
-                font-size: 12px;
+                font-size: 14px;
             }
         }
 
