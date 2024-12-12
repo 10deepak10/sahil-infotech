@@ -45,3 +45,11 @@ footer{
         }
     }
 }
+
+@media screen and (max-width:767px) {
+    footer .footer{
+        flex-wrap: wrap;
+        padding: 24px 16px;
+        gap: 20px;
+    }
+}

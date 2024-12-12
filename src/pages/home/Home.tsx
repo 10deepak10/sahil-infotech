@@ -4,6 +4,7 @@ import Footer from '../../components/footer/Footer'
 import Experties from './Experties/Experties'
 import './Home.scss'
 import Aboutus from './aboutus/Aboutus'
+import BookAService from './bookservice/BookAService'
 import Experience from './experience/Experience'
 import { Hero } from './hero/Hero'
 import IndustriesSwiper from './industry/IndustriesSwiper'
@@ -22,6 +23,7 @@ const Home = () => {
     <Experties/>
     {/* <Portfolio/> */}
     <IndustriesSwiper/>
+    <BookAService/>
     <Footer/>
     </>
   )
