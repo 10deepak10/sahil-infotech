@@ -76,9 +76,15 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validate()) {
-      console.log("Form Submitted:", formData);
-      // Simulate API call
-      alert("Message Sent Successfully!");
+      const subject = `Message from ${formData.firstName} ${formData.lastName}`;
+      const body = `Name: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nMessage:\n${formData.message}`;
+
+      const mailtoLink = `mailto:info@demo.com?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(body)}`;
+
+      window.location.href = mailtoLink;
+
       setFormData({
         firstName: "",
         lastName: "",
@@ -104,7 +110,7 @@ export default function Contact() {
             </div>
             <div className="flex-col info">
               <h6 className="heading6">Email Us</h6>
-              <p className="description">info@demo.com</p>
+              <p className="description">sahilinfotech@yahoo.com</p>
             </div>
           </div>
           <div className="contact-card flex" data-aos="fade-right">
@@ -118,7 +124,7 @@ export default function Contact() {
             </div>
             <div className="flex-col info">
               <h6 className="heading6">Our hotline number</h6>
-              <p className="description">+91 987635241</p>
+              <p className="description">+91 90167-38858</p>
             </div>
           </div>
           <div className="contact-card flex" data-aos="fade-right">
@@ -133,8 +139,7 @@ export default function Contact() {
             <div className="flex-col info">
               <h6 className="heading6">Found Us</h6>
               <p className="description">
-                Adipiscing elit. Arcu sed vestibulum sit sit hendrerit cras in
-                potenti
+               India , Gujarat , Surat
               </p>
             </div>
           </div>

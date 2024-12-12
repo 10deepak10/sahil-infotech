@@ -12,13 +12,15 @@ const Header = () => {
 
   return (
     <header className="d-flex">
-      <img
-        className="logo"
-        src="media/logo.png"
-        alt="logo"
-        width="172"
-        height="54"
-      />
+      <NavLink to="/">
+        <img
+          className="logo"
+          src="media/logo.png"
+          alt="logo"
+          width="172"
+          height="54"
+        />
+      </NavLink>
       <div className="action-container">
         <ul className="gap-20 for_desktop">
           <NavLink
@@ -36,10 +38,29 @@ const Header = () => {
         </ul>
         <ul className="gap-12 for_desktop">
           <li className="call menu_btns">
-            <img src="media/icons/call.svg" alt="call" width="24" height="24" />
+            <a
+              href="tel:+919016738858"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex j-center"
+            >
+              <img
+                src="media/icons/call.svg"
+                alt="call"
+                width="24"
+                height="24"
+              />
+            </a>
           </li>
           <li className="sms menu_btns">
-            <img src="media/icons/sms.svg" alt="sms" width="24" height="24" />
+            <a
+              href="mailto:sahilinfotech@yahoo.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex j-center"
+            >
+              <img src="media/icons/sms.svg" alt="sms" width="24" height="24" />
+            </a>
           </li>
         </ul>
         <span className="menu_btns for_mobile" onClick={toggleModal}>
