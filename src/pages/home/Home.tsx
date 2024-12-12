@@ -1,5 +1,4 @@
 import CTA from '../../components/cta/CTA'
-import Footer from '../../components/footer/Footer'
 // import Portfolio from '../portfolio/Portfolio'
 import Experties from './Experties/Experties'
 import './Home.scss'
@@ -24,7 +23,6 @@ const Home = () => {
     {/* <Portfolio/> */}
     <IndustriesSwiper/>
     <BookAService/>
-    <Footer/>
     </>
   )
 }
