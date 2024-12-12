@@ -43,7 +43,7 @@ body {
   flex-direction: column;
 }
 
-.align-center{
+.align-center {
   align-items: center;
 }
 
@@ -171,8 +171,18 @@ body {
 .radius-full {
   border-radius: 99px;
 }
+.for_mobile {
+  display: none !important;
+}
 
 @media screen and (max-width: 767px) {
+  .for_mobile {
+    display: flex !important;
+  }
+
+  .for_desktop {
+    display: none !important;
+  }
   .heading6 {
     font-size: 16px;
   }

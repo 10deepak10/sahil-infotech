@@ -1,41 +1,84 @@
-import { NavLink } from 'react-router-dom';
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "aos/dist/aos.css";
-import './Header.scss';
+import "./Header.scss";
 
 const Header = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
 
   return (
-    <header className='d-flex'>
-      <img className='logo' src="media/logo.png" alt="logo" width="172" height="54"/>
-      <div className='action-container'>
-        <ul className="gap-20">
-        <NavLink 
-              to="/" 
-              className={({ isActive }) => (isActive ? 'active' : '')}
-            >
-              Home
-            </NavLink>
-            <NavLink 
-              to="/contact" 
-              className={({ isActive }) => (isActive ? 'active' : '')}
-            >
-              Contact
-            </NavLink>
+    <header className="d-flex">
+      <img
+        className="logo"
+        src="media/logo.png"
+        alt="logo"
+        width="172"
+        height="54"
+      />
+      <div className="action-container">
+        <ul className="gap-20 for_desktop">
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Contact
+          </NavLink>
         </ul>
-          <ul className="gap-12">
-          <li className='call'> 
+        <ul className="gap-12 for_desktop">
+          <li className="call menu_btns">
             <img src="media/icons/call.svg" alt="call" width="24" height="24" />
-            </li>
-          <li className='sms'>
-            <img src="media/icons/sms.svg" alt="sms"  width="24" height="24" />
           </li>
-          <li className='quote-btn'>
-            <button>Get Quote</button>
+          <li className="sms menu_btns">
+            <img src="media/icons/sms.svg" alt="sms" width="24" height="24" />
           </li>
-          </ul>
+        </ul>
+        <span className="menu_btns for_mobile" onClick={toggleModal}>
+          <img
+            src="media/icons/hamburger.svg"
+            alt="menu"
+            width="20"
+            height="20"
+          />
+        </span>
       </div>
-      </header>
-  )
-}
 
-export default Header
+      {isModalOpen && (
+        <div className="modal-overlay" onClick={toggleModal}>
+          <div
+            className="modal"
+            onClick={(e) => e.stopPropagation()} // Prevent closing on modal content click
+          >
+            <div className="modal-header">
+              <h2>Menu</h2>
+              <span className="close-btn" onClick={toggleModal}>
+                &times;
+              </span>
+            </div>
+            <div className="modal-content">
+              <ul>
+                <NavLink to="/" onClick={toggleModal}>
+                  Home
+                </NavLink>
+                <NavLink to="/contact" onClick={toggleModal}>
+                  Contact
+                </NavLink>
+              </ul>
+            </div>
+          </div>
+        </div>
+      )}
+    </header>
+  );
+};
+
+export default Header;

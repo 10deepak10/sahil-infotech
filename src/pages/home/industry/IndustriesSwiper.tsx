@@ -25,20 +25,37 @@ const IndustriesSwiper = () => {
       </div>
       <div className="swiper-container" data-aos="fade-up" data-aos-delay="50">
         <Swiper
-           slidesPerView={5}
-           spaceBetween={20}
-           loop={true}
-           speed={10000}
-           autoplay={{
-             delay: 0,
-             disableOnInteraction: false,
-           }}
-           pagination={{
-             clickable: true,
-           }}
-           navigation={true}
-           modules={[Autoplay]}
-           className="mySwiper"
+          slidesPerView={5}
+          spaceBetween={20}
+          loop={true}
+          speed={10000}
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Autoplay]}
+          className="mySwiper"
+          breakpoints={{
+            // For mobile screens (max-width: 640px)
+            0: {
+              slidesPerView: 2,
+              spaceBetween: 10,
+            },
+            // For tablets (max-width: 768px)
+            640: {
+              slidesPerView: 3,
+              spaceBetween: 15,
+            },
+            // For larger screens
+            768: {
+              slidesPerView: 5,
+              spaceBetween: 20,
+            },
+          }}
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
