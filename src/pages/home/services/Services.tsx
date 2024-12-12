@@ -4,45 +4,45 @@ const Services = () => {
   const ourServices = [
     {
       id: 1,
-      title: "Hire Dedicated Developer",
-      img: "/media/icons/human-resources.svg",
-      description:
-        "Lorem ipsum odor amet, consectetuer adipiscing elit. Arcu sed vestibulum sit sit hendrerit cras in potenti. Urna massa aliquam efficitur lectus class ridiculus condimentum. N",
-    },
-    {
-      id: 2,
-      title: "Web Development",
-      img: "/media/icons/web-development.svg",
-      description:
-        "Lorem ipsum odor amet, consectetuer adipiscing elit. Arcu sed vestibulum sit sit hendrerit cras in potenti. Urna massa aliquam efficitur lectus class ridiculus condimentum. N",
-    },
-    {
-      id: 3,
       title: "UI/UX Design",
       img: "/media/icons/vector.svg",
       description:
-        "Lorem ipsum odor amet, consectetuer adipiscing elit. Arcu sed vestibulum sit sit hendrerit cras in potenti. Urna massa aliquam efficitur lectus class ridiculus condimentum. N",
+        "Transform your digital experience with our expert UI/UX design, crafting intuitive, visually captivating, and user-focused solutions that enhance engagement, drive satisfaction, and accelerate business growth.",
+    },
+    {
+      id: 2,
+      title: "Web Design & Development",
+      img: "/media/icons/coding.svg",
+      description:
+        "Elevate your online presence with our exceptional web design and development services. We create visually stunning, user-friendly, and high-performance websites tailored to your brand, ensuring a seamless digital experience",
+    },
+    {
+      id: 3,
+      title: "Full-Stack Development",
+      img: "/media/icons/web-development.svg",
+      description:
+        "Accelerate your business growth with our expert full-stack development, creating high-performance, scalable, and seamless websites that drive conversions, enhance user engagement, and ensure long-term success.",
     },
     {
       id: 4,
-      title: "Mobile App Development",
-      img: "/media/icons/coding.svg",
+      title: "AI Services",
+      img: "/media/icons/ai.svg",
       description:
-        "Lorem ipsum odor amet, consectetuer adipiscing elit. Arcu sed vestibulum sit sit hendrerit cras in potenti. Urna massa aliquam efficitur lectus class ridiculus condimentum. N",
+        "Supercharge your business with our AI-powered solutions, driving intelligent automation, game-changing insights, and innovative strategies that enhance efficiency, fuel growth, and transform your future success.",
     },
     {
       id: 5,
-      title: "Managed Support",
-      img: "/media/icons/like.svg",
+      title: "DevOps Services",
+      img: "/media/icons/infinity.svg",
       description:
-        "Lorem ipsum odor amet, consectetuer adipiscing elit. Arcu sed vestibulum sit sit hendrerit cras in potenti. Urna massa aliquam efficitur lectus class ridiculus condimentum. N",
+        "Revolutionize your workflows with our advanced DevOps services, driving seamless automation, continuous integration, and scalable infrastructure that boosts efficiency, accelerates delivery, and ensures transformative business growth.",
     },
     {
       id: 6,
-      title: "E-commerce development",
-      img: "/media/icons/shopping-cart.svg",
+      title: "QA Testing",
+      img: "/media/icons/testing.svg",
       description:
-        "Lorem ipsum odor amet, consectetuer adipiscing elit. Arcu sed vestibulum sit sit hendrerit cras in potenti. Urna massa aliquam efficitur lectus class ridiculus condimentum. N",
+        "Ensure flawless performance with our premium QA testing, swiftly identifying issues, optimizing quality, and delivering bug-free, high-performance solutions that elevate user experience and drive extraordinary business growth.",
     },
     // Add more projects as needed
   ];
