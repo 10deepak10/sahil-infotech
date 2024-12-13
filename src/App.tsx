@@ -5,6 +5,7 @@ import Contact from "./pages/contact/Contact";
 // import Portfolio from "./pages/portfolio/Portfolio";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
+import ScrollToTop from "./components/scrollToTop/ScrollToTop";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           {/* <Route path="/portfolio" element={<Portfolio />} /> */}
         </Routes>
+        <ScrollToTop/>
         <Footer />
       </Router>
     </>
