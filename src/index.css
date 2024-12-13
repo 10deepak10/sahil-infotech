@@ -92,7 +92,7 @@ body {
 
 .heading6 {
   color: #383838;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 140%;
 }
@@ -135,6 +135,12 @@ body {
 .bold {
   font-weight: 600;
 }
+.capitalize{
+  text-transform: capitalize;
+}
+.uppercase{
+  text-transform: uppercase;
+}
 
 .quote-btn {
   background: #091678;
@@ -154,7 +160,7 @@ body {
 }
 
 .cta-btn {
-  padding: 16px 40px;
+  padding: 12px 24px;
   background-color: #091678;
   color: #fff;
   max-width: fit-content;
