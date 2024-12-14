@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.1d7806b6.css",
-    "main.js": "/static/js/main.3778e713.js",
-    "static/js/453.0c9d7f7e.chunk.js": "/static/js/453.0c9d7f7e.chunk.js",
-    "static/media/cta-bg.png": "/static/media/cta-bg.fa9834837a93f40f2cae.png",
-    "static/media/semi-circle-bg.png": "/static/media/semi-circle-bg.811529af4272cacad684.png",
-    "static/media/name-logo.png": "/static/media/name-logo.516578ba18990bdcb580.png",
-    "index.html": "/index.html",
-    "main.1d7806b6.css.map": "/static/css/main.1d7806b6.css.map",
-    "main.3778e713.js.map": "/static/js/main.3778e713.js.map",
-    "453.0c9d7f7e.chunk.js.map": "/static/js/453.0c9d7f7e.chunk.js.map"
+    "main.css": "/sahil-infotech/static/css/main.88e5c306.css",
+    "main.js": "/sahil-infotech/static/js/main.c642a1c5.js",
+    "static/js/453.0c9d7f7e.chunk.js": "/sahil-infotech/static/js/453.0c9d7f7e.chunk.js",
+    "static/media/cta-bg.png": "/sahil-infotech/static/media/cta-bg.fa9834837a93f40f2cae.png",
+    "static/media/semi-circle-bg.png": "/sahil-infotech/static/media/semi-circle-bg.811529af4272cacad684.png",
+    "static/media/name-logo.png": "/sahil-infotech/static/media/name-logo.516578ba18990bdcb580.png",
+    "index.html": "/sahil-infotech/index.html",
+    "main.88e5c306.css.map": "/sahil-infotech/static/css/main.88e5c306.css.map",
+    "main.c642a1c5.js.map": "/sahil-infotech/static/js/main.c642a1c5.js.map",
+    "453.0c9d7f7e.chunk.js.map": "/sahil-infotech/static/js/453.0c9d7f7e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d7806b6.css",
-    "static/js/main.3778e713.js"
+    "static/css/main.88e5c306.css",
+    "static/js/main.c642a1c5.js"
   ]
 }
