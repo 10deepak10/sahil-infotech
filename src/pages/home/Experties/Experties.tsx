@@ -29,7 +29,7 @@ const Experties = () => {
       "Vue.png",
       "angular.jpg",
       "javascript.jpg",
-      'TypeScript.png',
+      'typeScript.png',
       "bootstrap.jpg",
       "Tailwind.png",
     ],
