@@ -28,25 +28,34 @@ const Footer = () => {
           <h4>Company</h4>
           <NavLink to="/">Home</NavLink>
           {/* <Link to="/portfolio">Portfolio</Link> */}
-          <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")}>Contact Us</NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Contact Us
+          </NavLink>
         </div>
         <div className="footer-item">
           <h4>Contact us at</h4>
           <a
+            className="social-links"
             href="https://www.instagram.com/sahil_infotech/"
             target="_blank"
             rel="noopener noreferrer"
           >
+            <img src="../../../../media/icons/instagram.svg" alt="facebook" />
             Instagram
           </a>
           {/* <a href="#" target="_blank" rel="noopener noreferrer">
             Upwork
           </a> */}
           <a
+            className="social-links"
             href="https://www.facebook.com/sahilinfotech06/"
             target="_blank"
             rel="noopener noreferrer"
           >
+            <img src="../../../../media/icons/facebook.svg" alt="facebook" />
             Facebook
           </a>
         </div>

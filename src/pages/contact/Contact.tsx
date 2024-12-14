@@ -148,7 +148,7 @@ export default function Contact() {
               </div>
               <div className="flex-col info">
                 <h6 className="heading6">Found Us</h6>
-                <p className="description">India , Gujarat , Surat</p>
+                <p className="description">Surat, Gujarat, India</p>
               </div>
             </a>
           </div>
@@ -260,6 +260,10 @@ export default function Contact() {
         </div>
 
         {/* Google Map Embed */}
+        <div className="container align-start gap-12"  data-aos="fade-up">
+        <h6 className="heading6 text-green">Google Maps</h6>
+        <p className="description">Found Us on <strong className="text-green">Google</strong> Maps</p>
+        
         <div className="map-container" data-aos="fade-up">
           <iframe
             title="Google Map Location"
@@ -270,6 +274,7 @@ export default function Contact() {
             allowFullScreen={true}
             loading="lazy"
           ></iframe>
+        </div>
         </div>
       </div>
     </>

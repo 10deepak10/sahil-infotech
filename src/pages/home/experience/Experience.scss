@@ -9,8 +9,14 @@
     .container {
         flex-direction: row;
         justify-content: space-between;
+        .info_section{
+            flex-wrap: nowrap;
+            .count{
+                text-align: center;
+            }
+        }
         div{
-            flex: 1;
+            flex: 1 0 1px;
         }
 
         img {
@@ -26,8 +32,9 @@
 
 @media screen and (max-width:767px) {
     .eperience_container {
+        padding: 20px 16px;
         .container {
-            flex-wrap: wrap;
+            flex-direction: column;
             justify-content: center;
             gap: 20px;
 
@@ -50,6 +57,7 @@
 
             .count {
                 font-size: 14px;
+                text-align: center;
             }
         }
 

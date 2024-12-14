@@ -22,9 +22,22 @@ footer{
                 font-size: 14px;
                 text-decoration: none;
                 line-height: 140%;
+                &.social-links{
+                    display: flex;
+                    gap: 4px;
+                    align-items: center;
+                    img{
+                        width: 12px;
+                        height: 12px;
+                        filter: invert(.69);
+                    }
+                }
                 &:hover{
                     color: #ffffff;
                     transition: 0.3s ease-in-out;
+                    &.social-links img{
+                        filter: invert(1);
+                    }
                 }
                 &.active{
                     color: #E8E8E8;
