@@ -102,7 +102,10 @@ export default function Contact() {
       <div className="container contact-main-container gap-80 py-40">
         <div className="flex gap-40 strech-content">
           <div className="flex-col gap-30 contact-card-container">
-            <div className="contact-card flex" data-aos="fade-right">
+            <a href="mailto:sahilinfotech@yahoo.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-card flex" data-aos="fade-right">
               <div className="icon-circle">
                 <img
                   src="media/icons/sms.svg"
@@ -115,8 +118,8 @@ export default function Contact() {
                 <h6 className="heading6">Email Us</h6>
                 <p className="description">sahilinfotech@yahoo.com</p>
               </div>
-            </div>
-            <div className="contact-card flex" data-aos="fade-right">
+            </a>
+            <a href="tel:+919016738858" target="_blank" rel="noopener noreferrer" className="contact-card flex" data-aos="fade-right">
               <div className="icon-circle">
                 <img
                   src="media/icons/call.svg"
@@ -129,8 +132,12 @@ export default function Contact() {
                 <h6 className="heading6">Our hotline number</h6>
                 <p className="description">+91 90167-38858</p>
               </div>
-            </div>
-            <div className="contact-card flex" data-aos="fade-right">
+            </a>
+            <a 
+            href="https://maps.app.goo.gl/DygiJbMVrx4NkMvh9"
+            target="_blank"
+            rel="noopener noreferrer"
+             className="contact-card flex" data-aos="fade-right">
               <div className="icon-circle">
                 <img
                   src="media/icons/location.svg"
@@ -143,7 +150,7 @@ export default function Contact() {
                 <h6 className="heading6">Found Us</h6>
                 <p className="description">India , Gujarat , Surat</p>
               </div>
-            </div>
+            </a>
           </div>
           <form
             className="flex-col contact-form"
