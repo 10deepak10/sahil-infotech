@@ -8,6 +8,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 100%;
         .item{
             display: flex;
             flex-direction: column;
@@ -94,14 +95,15 @@
         gap: 20px 15px;
         .left-side{
             .item{
-                height: 275px;
+                height: unset;
+                width: 100%;
                 img:not(.team){
-                    width: 200px;
+                    width: 100%;
                     margin: 0;
                 }
                 .card{
-                    width: 194px;
-                    font-size: 14px;
+                    width: 100%;
+                    font-size: 12px;
                     img{
                         display: none;
                     }

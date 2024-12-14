@@ -17,6 +17,7 @@ const Experties = () => {
     
     'UI/UX': [
       "Figma.png",
+      "Canva.png",
       "Photoshop.png",
       "Illustrator.png",
       "Balsamiq.png",
@@ -27,6 +28,7 @@ const Experties = () => {
       "react.jpg",
       "Vue.png",
       "angular.jpg",
+      "javascript.jpg",
       'TypeScript.png',
       "bootstrap.jpg",
       "Tailwind.png",
@@ -50,7 +52,6 @@ const Experties = () => {
       "TensorFlow.png",
       "Keras.png",
       "PyTorch.png",
-      "Jenkins.png",
       "Scikit-learn.png",
       "OpenCV.png",
       "NLTK.png",
@@ -65,6 +66,7 @@ const Experties = () => {
       "GitHub.png",
       "GitLab.png",
       "Bitbucket.png",
+      "Docker.png",
       "Linux OS.png",
       "VPS.png",
       "Hostinger.png",
