@@ -20,8 +20,8 @@ const IndustriesSwiper = () => {
   return (
     <section className="industries-swiper section">
       <div className="section-title" data-aos="fade-up">
-        <h2>Industries We Serve</h2>
-        <p>Explore the industries we cater to with tailored solutions.</p>
+        <h2 className="heading3">Industries We Serve</h2>
+        <p className="text">Explore the industries we cater to with tailored solutions.</p>
       </div>
       <div className="swiper-container" data-aos="fade-up" data-aos-delay="50">
         <Swiper
