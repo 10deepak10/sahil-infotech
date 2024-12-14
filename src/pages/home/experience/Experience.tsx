@@ -21,17 +21,17 @@ const Experience = () => {
           <hr />
           <div className="flex-col gap-12 align-center">
             <img src="/media/icons/com-project.svg" alt="upwork" />
-            <span className="count">50+ Project Completed</span>
+            <span className="count">5+ Project Completed</span>
           </div>
           <hr />
           <div className="flex-col gap-12 align-center">
             <img src="/media/icons/briefcase.svg" alt="upwork" />
-            <span className="count">5+ Years Of Experience</span>
+            <span className="count">2+ Years Of Experience</span>
           </div>
           <hr />
           <div className="flex-col gap-12 align-center">
             <img src="/media/icons/user.svg" alt="upwork" />
-            <span className="count">12+ Experts Team</span>
+            <span className="count">14+ Experts Team</span>
           </div>
         </div>
       </div>

@@ -19,8 +19,12 @@ export const Hero = () => {
   return (
     <div className="hero-container">
       <div className='left-side' data-aos="fade-right">
-      <h1>We Build Best, Advance<br/><span>IT Software Solution</span></h1>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br/> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+      
+
+      <h1>Transform Your Digital Journey<br/><span>with Sahil Infotech</span></h1>
+      <p>We are a team of innovative developers at Sahil Infotech, <br/>building cutting-edge websites with the latest technologies to elevate your business.
+
+</p>
       <button className='quote-btn' onClick={()=>handleNavigate('/contact')}>Contact Us</button>
       </div>
       <div className='right-side' data-aos="fade-left">
@@ -30,7 +34,7 @@ export const Hero = () => {
           <div className='stat-item'>
             <div className='item'>
               <img src="../../../../media/icons/user.svg" alt="user" />
-              02
+              2 +
             </div>
             <p>Year Experience</p>
           </div>
@@ -38,7 +42,7 @@ export const Hero = () => {
           <div className='stat-item'>
           <div className='item'>
           <img src="../../../../media/icons/briefcase.svg" alt="briefcase" />
-          50 +
+          5 +
           </div>
           <p>Project Complete</p>
           </div>

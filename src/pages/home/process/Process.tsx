@@ -61,10 +61,9 @@ const Process = () => {
     <div className="process_container">
       <div className="container text-center gap-50 py-40">
         <div className="title flex-col gap-16" data-aos="fade-up">
-          <h3 className="heading3">Our Core process</h3>
+          <h3 className="heading3">Our Way of Working</h3>
           <p className="sub-title">
-            m ipsum odor amet, consectetuer adipiscing elit. Arcu sed vestibulum
-            sit sit hendrerit cras in potenti
+          We implement result-driven strategies tailored to your business needs and goals. As a reliable Linux VPS hosting provider in India, we offer solutions designed to empower your firm and help you achieve your desired outcomes.
           </p>
         </div>
         <div className="process_wrapper" data-aos="fade-up" data-aos-delay="50">
