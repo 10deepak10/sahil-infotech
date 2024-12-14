@@ -24,7 +24,9 @@ export const Hero = () => {
       <h1>Transform Your Digital Journey with<br/><span> Sahil Infotech</span></h1>
       <p className="sub-title">We are a team of innovative developers at Sahil Infotech, <br/>building cutting-edge websites with the latest technologies to 
       elevate your business.</p>
-      <button className='quote-btn' onClick={()=>handleNavigate('/contact')}>Contact Us</button>
+      <button className='cta-btn' onClick={()=>handleNavigate('/contact')}>Contact Us
+      <img src="../../../../media/icons/arrow-up-right.svg" alt="arrow-up" width="18"  height="18" />
+      </button>
       </div>
       <div className='right-side' style={
                   { "--card-bg": `url(../../../../media/images/logo-shadow.png)` } as React.CSSProperties

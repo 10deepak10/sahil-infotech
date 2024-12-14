@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import "./Aboutus.scss";
 import AOS from "aos";
+import { useNavigate } from "react-router-dom";
 
 export default function Aboutus() {
   useEffect(() => {
@@ -10,6 +11,10 @@ export default function Aboutus() {
       once: false,
     });
   }, []);
+  const navigate = useNavigate();
+  const handleNavigate = (path: string) => {
+    navigate(path);
+  };
   return (
     <div className="container container-about" data-aos="fade-up">
       <div className="left-side">
@@ -38,12 +43,14 @@ export default function Aboutus() {
             Dedicated & Hardworking
             <br /> Professionals
           </div>
+          <div className="img-container">
           <img
             src="../../../../media/experties_images/cta-bg.png"
             alt="website-logo"
             width="300"
             height="300"
           />
+          </div>
         </div>
       </div>
       <div className="right-side">
@@ -68,7 +75,9 @@ export default function Aboutus() {
             businesses thrive in the digital era.
           </li>
         </ul>
-        <button className="quote-btn">Contact Us</button>
+        <button className="cta-btn" onClick={()=>handleNavigate('/contact')}>Contact Us
+        <img src="../../../../media/icons/arrow-up-right.svg" alt="arrow-up" width="18"  height="18" />
+        </button>
       </div>
     </div>
   );

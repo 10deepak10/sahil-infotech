@@ -53,6 +53,9 @@ body {
 .align-center {
   align-items: center;
 }
+.align-start {
+  align-items: flex-start;
+}
 
 /* gaps  */
 
@@ -160,7 +163,7 @@ body {
   text-transform: uppercase;
 }
 
-.quote-btn {
+.cta-btn {
   background: #091678;
   border: 1px solid transparent;
   color: #ffffff;
@@ -169,35 +172,41 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  white-space: nowrap;
   border-radius: 12px;
   height: 40px;
   width: 122px;
   cursor: pointer;
   padding: 20px;
   box-sizing: border-box;
-  transition: 0.3s ease-in-out;
-  &:hover:not(.white-btn){
-    color: #091678;
-    background: #ffffff;
-    border: 1px solid #091678;
-  }
-}
-
-.cta-btn {
-  padding: 12px 24px;
-  background-color: #091678;
-  color: #fff;
-  max-width: fit-content;
-  position: relative;
   transition: all 0.3s ease-in-out;
-  cursor: pointer;
-  border: none;
-  border-radius: 8px;
-
-  &:hover {
-    background-color: #0a2438;
-    transform: scale(0.95);
+  img{
+    margin-left: 5px;
+    transition: filter 0.3s ease-in-out;
   }
+  &:hover.btn-white{
+    color: #fff;
+    background: #00000000;
+    border-color:#fff ;
+    img{
+      filter: grayscale(1) invert(1);
+    }
+  }
+   &:not(.btn-white){
+    img{
+      filter: grayscale(1) invert(1);
+    }
+    &:hover{
+      color: #091678;
+      background: #ffffff;
+      border: 1px solid #091678;
+      img{
+        filter: unset;
+      }
+    }
+
+  }
+ 
 }
 
 .radius-full {

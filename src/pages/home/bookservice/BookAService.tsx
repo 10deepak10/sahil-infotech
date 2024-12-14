@@ -14,7 +14,9 @@ const BookAService = () => {
         <p className="text">
         Book a 20-minute call to understand how Sahil Infotech works and get ready to accelerate your company.
         </p>
-        <button className="quote-btn" onClick={()=>handleNavigate('/contact')}>Contact us</button>
+        <button className="cta-btn" onClick={()=>handleNavigate('/contact')}>Contact us
+        <img src="../../../../media/icons/arrow-up-right.svg" alt="arrow-up" width="18"  height="18" />
+        </button>
       </div>
     </div>
   );

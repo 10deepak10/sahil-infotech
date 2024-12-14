@@ -260,7 +260,7 @@ export default function Contact() {
         </div>
 
         {/* Google Map Embed */}
-        <div className="container">
+        <div className="container align-start gap-12"  data-aos="fade-up">
         <h6 className="heading6 text-green">Google Maps</h6>
         <p className="description">Found Us on <strong className="text-green">Google</strong> Maps</p>
         
