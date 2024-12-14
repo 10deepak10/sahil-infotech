@@ -1,0 +1,28 @@
+.container-cta{
+    background: url(../../../public/media/images/cta-bg.png);
+    padding: 50px  100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 1270px;
+    h2{
+        color: #ffffff;
+        font-size: 36px;
+        line-height: 140%;
+    }
+    .btn-white{
+        background: #ffffff;
+        color: #091678;
+        margin-top: 20px;
+        width: unset;
+        img{
+            margin-left: 5px;
+        }
+    }
+    @media (max-width: 767px) {
+        padding: 20px 15px;
+        h2{
+            font-size: 28px;
+        }
+    }
+}
