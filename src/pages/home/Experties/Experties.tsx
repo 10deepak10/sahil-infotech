@@ -85,8 +85,7 @@ const Experties = () => {
       <h2>
         Our Expertise in Various Technologies
         <span>
-          m ipsum odor amet, consectetuer adipiscing elit. Arcu sed vestibulum
-          sit sit hendrerit cras in potent
+        Leveraging advanced technologies to craft innovative solutions that empower businesses and drive industry-leading success.
         </span>
       </h2>
 

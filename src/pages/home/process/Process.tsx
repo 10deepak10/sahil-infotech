@@ -63,13 +63,22 @@ const Process = () => {
         <div className="title flex-col gap-16" data-aos="fade-up">
           <h3 className="heading3">Our Way of Working</h3>
           <p className="sub-title">
-          We implement result-driven strategies tailored to your business needs and goals. As a reliable Linux VPS hosting provider in India, we offer solutions designed to empower your firm and help you achieve your desired outcomes.
+            We implement result-driven strategies tailored to your business
+            needs and goals. As a reliable Linux VPS hosting provider in India,
+            we offer solutions designed to empower your firm and help you
+            achieve your desired outcomes.
           </p>
         </div>
         <div className="process_wrapper" data-aos="fade-up" data-aos-delay="50">
           {ourProcess.map((item) =>
             item.title ? (
-              <div key={item.id} className="process_card flex-col gap-16">
+              <div
+                key={item.id}
+                style={
+                  { "--card-bg": `url(${item.img})` } as React.CSSProperties
+                }
+                className="process_card flex-col gap-16"
+              >
                 <img src={item.img} alt={item.title} height={100} width={100} />
                 <h4 className="text f-18 bold">{item.title}</h4>
                 <p className="text">{item.description}</p>
@@ -77,7 +86,9 @@ const Process = () => {
             ) : (
               <div
                 key={item.id}
-                className={item.id === 9 ? "card-flow align-start" : "card-flow"}
+                className={
+                  item.id === 9 ? "card-flow align-start" : "card-flow"
+                }
               >
                 <img
                   src={item.img}

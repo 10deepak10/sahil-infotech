@@ -113,7 +113,7 @@
     }
 
     @media(max-width: 767px) {
-        padding: 0px;
+        padding: 20px 0px;
 
         h2 {
             font-size: 28px;
@@ -141,12 +141,18 @@
                 overflow-x: auto;
             }
         }
-        .tab-content {
-            
-            .card-container {
-                padding:  0px 16px;
 
-            }}
+        .tab-content {
+
+            .card-container {
+                padding: 0px 16px;
+
+                .card img {
+                    filter: unset;
+                }
+
+            }
+        }
 
     }
 }

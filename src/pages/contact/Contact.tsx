@@ -98,7 +98,7 @@ export default function Contact() {
 
   return (
     <>
-      <Banner background={"/media/hero-bg.png"} title={"We Are Open to Talk"} description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."} />
+      <Banner background={"/media/hero-bg.png"} title={"We Are Open to Talk"} description={"Let's start a conversation together, we'll create the solutions that drive your business forward."} />
       <div className="container contact-main-container gap-80 py-40">
         <div className="flex gap-40 strech-content">
           <div className="flex-col gap-30 contact-card-container">
@@ -245,7 +245,7 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              className="cta-btn radius-full f-14 bold uppercase"
+              className="cta-btn f-14 bold uppercase"
             >
               Submit
             </button>
