@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "./Footer.scss";
 import AOS from "aos";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   useEffect(() => {
@@ -26,9 +26,9 @@ const Footer = () => {
         </div>
         <div className="footer-item">
           <h4>Company</h4>
-          <Link to="/">Home</Link>
+          <NavLink to="/">Home</NavLink>
           {/* <Link to="/portfolio">Portfolio</Link> */}
-          <Link to="/contact">Contact Us</Link>
+          <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")}>Contact Us</NavLink>
         </div>
         <div className="footer-item">
           <h4>Contact us at</h4>

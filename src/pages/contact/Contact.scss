@@ -9,7 +9,6 @@
         max-width: 500px;
         flex-wrap: nowrap;
 
-
         .icon-circle {
             display: flex;
             flex-shrink: 0;
@@ -23,6 +22,7 @@
             img {
                 width: 32px;
                 height: 32px;
+                transition: transform 2s ease;
             }
         }
 
@@ -35,6 +35,15 @@
                 line-height: 130%;
             }
         }
+        &:hover{
+            .icon-circle img{
+                transform: rotateY(360deg);
+            }
+        }
+        &:not(:hover) .icon-circle img {
+            transition: none; 
+        }
+    
 
     }
 }
