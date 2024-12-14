@@ -51,8 +51,7 @@ const Services = () => {
       <div className="title flex-col gap-16" data-aos="fade-up">
         <h3 className="heading3">Our Core Services</h3>
         <p className="text">
-          m ipsum odor amet, consectetuer adipiscing elit. Arcu sed vestibulum
-          sit sit hendrerit cras in potenti
+        Accelerate your business growth with our services, where design meets innovation and technology delivers excellence.
         </p>
       </div>
       <div className="services_wrapper" data-aos="fade-up" data-aos-delay="50">

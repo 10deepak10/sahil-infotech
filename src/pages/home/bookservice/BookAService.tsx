@@ -14,7 +14,7 @@ const BookAService = () => {
         <p className="text">
         Book a 20-minute call to understand how Blackbugs works and get ready to accelerate your company.
         </p>
-        <button className="cta-btn radius-full f-18 bold" onClick={()=>handleNavigate('/contact')}>Contact us</button>
+        <button className="cta-btn f-16 bold" onClick={()=>handleNavigate('/contact')}>Contact Us</button>
       </div>
     </div>
   );
