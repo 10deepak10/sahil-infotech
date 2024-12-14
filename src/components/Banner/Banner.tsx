@@ -1,5 +1,4 @@
 import './Banner.scss';
-import PropTypes from 'prop-types';
 
 interface BannerProps {
   background: string;

@@ -77,7 +77,7 @@ const Process = () => {
             ) : (
               <div
                 key={item.id}
-                className={item.id == 9 ? "card-flow align-start" : "card-flow"}
+                className={item.id === 9 ? "card-flow align-start" : "card-flow"}
               >
                 <img
                   src={item.img}

@@ -39,9 +39,9 @@ const Footer = () => {
           >
             Instagram
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          {/* <a href="#" target="_blank" rel="noopener noreferrer">
             Upwork
-          </a>
+          </a> */}
           <a
             href="https://www.facebook.com/sahilinfotech06/"
             target="_blank"
