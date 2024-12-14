@@ -11,7 +11,7 @@ export default function Aboutus() {
     });
   }, []);
   return (
-    <div className="container-about" data-aos="fade-up">
+    <div className="container container-about" data-aos="fade-up">
       <div className="left-side">
         <div className="item">
           <img

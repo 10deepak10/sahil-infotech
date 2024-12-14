@@ -18,13 +18,12 @@ export const Hero = () => {
 
   return (
     <div className="hero-container">
+      <div className="container mbl flex-row j-between">
       <div className='left-side' data-aos="fade-right">
       
-
-      <h1>Transform Your Digital Journey<br/><span>with Sahil Infotech</span></h1>
-      <p>We are a team of innovative developers at Sahil Infotech, <br/>building cutting-edge websites with the latest technologies to elevate your business.
-
-</p>
+      <h1>Transform Your Digital Journey with<br/><span> Sahil Infotech</span></h1>
+      <p className="sub-title">We are a team of innovative developers at Sahil Infotech, <br/>building cutting-edge websites with the latest technologies to 
+      elevate your business.</p>
       <button className='quote-btn' onClick={()=>handleNavigate('/contact')}>Contact Us</button>
       </div>
       <div className='right-side' data-aos="fade-left">
@@ -47,6 +46,7 @@ export const Hero = () => {
           <p>Project Complete</p>
           </div>
         </div>
+      </div>
       </div>
     </div>
   )

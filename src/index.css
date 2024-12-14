@@ -26,6 +26,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
 }
 .strech-content {
   margin: unset;
@@ -41,6 +42,9 @@ body {
 .flex-col {
   display: flex;
   flex-direction: column;
+}
+.j-between{
+  justify-content: space-between;
 }
 
 .align-center {
@@ -81,6 +85,10 @@ body {
   padding-bottom: 80px;
 }
 
+.m-0{
+  margin: 0 !important;
+}
+
 /* typography  */
 
 .heading3 {
@@ -107,11 +115,13 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 140%;
+  color: #383838;
 }
 .sub-title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 140%;
+  color: #727272;
 }
 .text-center {
   text-align: center;
@@ -119,7 +129,9 @@ body {
 .text-left {
   text-align: left;
 }
-
+.flex-row{
+  flex-direction: row;
+}
 .f-20 {
   font-size: 20px;
 }
@@ -157,6 +169,12 @@ body {
   cursor: pointer;
   padding: 20px;
   box-sizing: border-box;
+  transition: 0.3s ease-in-out;
+  &:hover:not(.white-btn){
+    color: #091678;
+    background: #ffffff;
+    border: 1px solid #091678;
+  }
 }
 
 .cta-btn {

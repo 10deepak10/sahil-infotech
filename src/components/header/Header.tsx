@@ -11,7 +11,8 @@ const Header = () => {
   };
 
   return (
-    <header className="d-flex">
+    <header className="flex-row d-flex m-0">
+      <div className="container flex-row j-between">
       <NavLink to="/">
         <img
           className="logo"
@@ -63,7 +64,7 @@ const Header = () => {
             </a>
           </li>
         </ul>
-        <span className="menu_btns for_mobile" onClick={toggleModal}>
+        <span className="for_mobile" onClick={toggleModal}>
           <img
             src="media/icons/hamburger.svg"
             alt="menu"
@@ -80,17 +81,19 @@ const Header = () => {
             onClick={(e) => e.stopPropagation()} // Prevent closing on modal content click
           >
             <div className="modal-header">
-              <h2>Menu</h2>
+              <h2 >Menu</h2>
               <span className="close-btn" onClick={toggleModal}>
                 &times;
               </span>
             </div>
             <div className="modal-content">
               <ul>
-                <NavLink to="/" onClick={toggleModal}>
+                <NavLink  to="/" onClick={toggleModal} >
+                <img src="../../../../media/icons/home.svg" alt="home" width="18" height="18" />
                   Home
                 </NavLink>
                 <NavLink to="/contact" onClick={toggleModal}>
+                <img src="../../../../media/icons/call.svg" alt="contact" width="18" height="18" />
                   Contact
                 </NavLink>
               </ul>
@@ -98,6 +101,7 @@ const Header = () => {
           </div>
         </div>
       )}
+    </div>
     </header>
   );
 };

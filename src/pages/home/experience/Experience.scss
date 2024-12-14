@@ -4,6 +4,7 @@
     align-items: center;
     width: 100%;
     box-sizing: border-box;
+    padding: 50px 85px;
 
     .container {
         flex-direction: row;
@@ -22,8 +23,6 @@
 
 @media screen and (max-width:767px) {
     .eperience_container {
-        
-
         .container {
             flex-wrap: wrap;
             justify-content: center;

@@ -4,6 +4,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    max-width: 1270px;
     h2{
         color: #ffffff;
         font-size: 36px;
@@ -13,6 +14,10 @@
         background: #ffffff;
         color: #091678;
         margin-top: 20px;
+        width: unset;
+        img{
+            margin-left: 5px;
+        }
     }
     @media (max-width: 767px) {
         padding: 20px 15px;

@@ -5,7 +5,6 @@ header {
   height: 65px;
   background: #ffffff;
   border-bottom: 1px solid #eaecee;
-  padding: 0 100px;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -116,6 +115,7 @@ header {
   }
   
   .modal-header h2 {
+    font-size: 18px;
     margin: 0;
   }
   
@@ -125,7 +125,6 @@ header {
   }
   
   .modal-content {
-    padding: 16px;
     flex: 1;
   }
   
@@ -136,9 +135,24 @@ header {
   
   .modal-content ul a {
     text-decoration: none;
-    color: black;
+    color: #383838;
     display: block;
-    padding: 8px 0;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    background-color: #f7fbfd;
+    gap: 10px;
+    img{
+      filter: sepia();
+    }
+    &.active{
+      color: #ffffff;
+      font-weight: 500;
+      background-color: #091678;
+      img{
+        filter: invert(1) brightness(2) contrast(100);
+      }
+    }
   }
   
   @keyframes fadeIn {
