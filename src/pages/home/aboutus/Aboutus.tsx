@@ -55,7 +55,7 @@ export default function Aboutus() {
       </div>
       <div className="right-side">
         <h2>Who We Are</h2>
-        <p className="sub-title">
+        <p className="text">
           Empowering businesses with innovative digital solutions that build
           meaningful connections and drive success.
         </p>
