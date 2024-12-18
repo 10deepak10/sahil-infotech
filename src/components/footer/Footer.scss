@@ -21,7 +21,7 @@ footer{
                 width: 172px;
                 height: auto;
             }
-            a{
+            a,span{
                 color: #aeabab;
                 font-size: 14px;
                 text-decoration: none;
@@ -36,7 +36,7 @@ footer{
                         filter: invert(.69);
                     }
                 }
-                &:hover{
+                &:hover:not(span){
                     color: #ffffff;
                     transition: 0.3s ease-in-out;
                     &.social-links img{

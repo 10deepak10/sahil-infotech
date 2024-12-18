@@ -88,10 +88,12 @@
                 border-radius: 12px;
                 padding: 12px;
                 width: 164px;
+                max-height: 64px;
                 max-width: 40%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                box-sizing: border-box;
 
                 img {
                     height: auto;
@@ -125,7 +127,7 @@
         }
 
         .tab-container {
-            margin-top: 20px;
+            margin: 0px -20px;
             border-bottom: 1px solid #e2e2e2;
             width: 100dvw;
             overflow: hidden;

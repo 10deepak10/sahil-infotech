@@ -76,15 +76,22 @@ const Experties = () => {
       "Microsoft Azure.png",
     ],
     "Database": [
-      "sql lite.png",
-      // "Scikit-learn.png",
-      "postgreaql.png",
-      "Phpmyadmin.png",
       "oracle.png",
       "my SQL.png",
+      "Microsoft SQl Server.png",
+      "postgreaql.png",
       "mongodb.png",
-      "maria db.png",
-      "amazon dynamodb.png",
+
+      "Redis.png",
+      "Elasticsearch.png",
+      "Apache Cassandra.png",
+
+
+      // "sql lite.png",
+      // "Scikit-learn.png",
+      // "Phpmyadmin.png",
+      // "maria db.png",
+      // "amazon dynamodb.png",
     ],
   };
 

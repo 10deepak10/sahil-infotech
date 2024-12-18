@@ -69,16 +69,20 @@ const Footer = () => {
         </div>
         <div className="footer-item">
           <h4>Contact Info</h4>
-          <a href="tel:+919016738858" target="_blank" rel="noopener noreferrer">
+          {/* <a href="tel:+919016738858" target="_blank" rel="noopener noreferrer"> */}
+            <span>
             +91 90167-38858
-          </a>
-          <a
+            </span>
+          {/* </a> */}
+          {/* <a
             href="mailto:sahilinfotech@yahoo.com"
             target="_blank"
             rel="noopener noreferrer"
-          >
+          > */}
+            <span>
             sahilinfotech@yahoo.com
-          </a>
+            </span>
+          {/* </a> */}
         </div>
       </div>
       <div className="copyRight">
