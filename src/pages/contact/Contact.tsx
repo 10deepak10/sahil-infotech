@@ -98,14 +98,23 @@ export default function Contact() {
 
   return (
     <>
-      <Banner background={"/media/hero-bg.png"} title={"We Are Open to Talk"} description={"Let's start a conversation together, we'll create the solutions that drive your business forward."} />
+      <Banner
+        background={"/media/hero-bg.png"}
+        title={"We Are Open to Talk"}
+        description={
+          "Let's start a conversation together, we'll create the solutions that drive your business forward."
+        }
+      />
       <div className="container contact-main-container gap-80 py-40">
         <div className="flex gap-40 strech-content">
           <div className="flex-col gap-30 contact-card-container">
-            <a href="mailto:sahilinfotech@yahoo.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="contact-card flex" data-aos="fade-right">
+            <a
+              href="mailto:sahilinfotech@yahoo.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-card flex"
+              data-aos="fade-right"
+            >
               <div className="icon-circle">
                 <img
                   src="media/icons/sms.svg"
@@ -119,7 +128,13 @@ export default function Contact() {
                 <p className="description">sahilinfotech@yahoo.com</p>
               </div>
             </a>
-            <a href="tel:+919016738858" target="_blank" rel="noopener noreferrer" className="contact-card flex" data-aos="fade-right">
+            <a
+              href="tel:+919016738858"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-card flex"
+              data-aos="fade-right"
+            >
               <div className="icon-circle">
                 <img
                   src="media/icons/call.svg"
@@ -133,11 +148,13 @@ export default function Contact() {
                 <p className="description">+91 90167-38858</p>
               </div>
             </a>
-            <a 
-            href="https://maps.app.goo.gl/DygiJbMVrx4NkMvh9"
-            target="_blank"
-            rel="noopener noreferrer"
-             className="contact-card flex" data-aos="fade-right">
+            <a
+              href="https://maps.app.goo.gl/DygiJbMVrx4NkMvh9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-card flex"
+              data-aos="fade-right"
+            >
               <div className="icon-circle">
                 <img
                   src="media/icons/location.svg"
@@ -250,33 +267,33 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-            <button
-              type="submit"
-              className="cta-btn f-14 bold uppercase"
-            >
+            <button type="submit" className="cta-btn f-14 bold uppercase">
               Submit
             </button>
           </form>
         </div>
 
         {/* Google Map Embed */}
-        <div className="container align-start gap-12"  data-aos="fade-up">
-        <h6 className="heading6 text-green">Google Maps</h6>
-        <p className="description">Found Us on <strong className="text-green">Google</strong> Maps</p>
-        
-        <div className="map-container" data-aos="fade-up">
-          <iframe
-            title="Google Map Location"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d59515.7689918459!2d72.840717!3d21.2026613!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f9dd1f97717%3A0x6c479e12338d1fa2!2sIcon%20Heights!5e0!3m2!1sen!2sin!4v1734118102180!5m2!1sen!2sin"
-            width="100%"
-            height="400"
-            style={{ border: 0 }}
-            allowFullScreen={true}
-            loading="lazy"
-          ></iframe>
-        </div>
+        <div className="container align-start gap-12" data-aos="fade-up">
+          <h6 className="heading6 text-green">Google Maps</h6>
+          <p className="description">
+            Found Us on <strong className="text-green">Google</strong> Maps
+          </p>
+
+          <div className="map-container" data-aos="fade-up">
+            <iframe
+              title="Google Map Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.756976801952!2d72.87919467526147!3d21.201810980491043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f7fb6963db3%3A0x53db07f69d77a205!2sShayona%20Plaza!5e0!3m2!1sen!2sin!4v1734368065392!5m2!1sen!2sin"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+            ></iframe>
+          </div>
         </div>
       </div>
     </>
   );
 }
+

@@ -29,9 +29,9 @@ export const Hero = () => {
       </button>
       </div>
       <div className='right-side' style={
-                  { "--card-bg": `url(../../../../media/images/logo-shadow.png)` } as React.CSSProperties
+                  { "--card-bg": `url(../../../../media/hero.jpg)` } as React.CSSProperties
                 } data-aos="fade-left">
-        <img className='hand' src="../../../../media/hand.png" alt="hand" width="58" height="58" />
+        {/* <img className='hand' src="../../../../media/hand.png" alt="hand" width="58" height="58" />
         <p>You deserve the best.<br/>We specialize in delivering tailored<br/> software solutions and DevOps<br/> outsourcing services.</p>
         <div className='stats'>
           <div className='stat-item'>
@@ -49,7 +49,7 @@ export const Hero = () => {
           </div>
           <p>Project Complete</p>
           </div>
-        </div>
+        </div> */}
       </div>
       </div>
     </div>

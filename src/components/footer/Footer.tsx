@@ -15,12 +15,11 @@ const Footer = () => {
   return (
     <footer data-aos="fade-up">
       <div className="footer">
-        <div className="footer-item">
+        <div className="footer-item cutoff-width">
           <img src="../../../../media/logo-white.png" alt="sahil-logo" />
           <p>
             We are a team of innovative developers at Sahil Infotech,
-            <br />
-            building cutting-edge websites with the <br /> latest technologies
+            building cutting-edge websites with the latest technologies
             to elevate your business.
           </p>
         </div>
@@ -57,6 +56,15 @@ const Footer = () => {
           >
             <img src="../../../../media/icons/facebook.svg" alt="facebook" />
             Facebook
+          </a>
+          <a
+            className="social-links"
+            href="https://www.linkedin.com/company/sahil-infotech/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="../../../../media/icons/linkedin.svg" alt="facebook" />
+            linkedin
           </a>
         </div>
         <div className="footer-item">

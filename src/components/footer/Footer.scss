@@ -13,6 +13,10 @@ footer{
             color: #ffffff;
             flex-direction: column;
             gap: 10px;
+            &.cutoff-width{
+                width: 400px;
+                max-width: 100%;
+            }
             img{
                 width: 172px;
                 height: auto;
