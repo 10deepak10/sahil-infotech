@@ -80,7 +80,7 @@ export default function Contact() {
       const subject = `Message from ${formData.firstName} ${formData.lastName}`;
       const body = `Name: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nMessage:\n${formData.message}`;
 
-      const mailtoLink = `mailto:info@demo.com?subject=${encodeURIComponent(
+      const mailtoLink = `mailto:sahilinfotech@yahoo.com?subject=${encodeURIComponent(
         subject
       )}&body=${encodeURIComponent(body)}`;
 
