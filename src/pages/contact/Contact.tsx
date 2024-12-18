@@ -283,7 +283,7 @@ export default function Contact() {
           <div className="map-container" data-aos="fade-up">
             <iframe
               title="Google Map Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.756976801952!2d72.87919467526147!3d21.201810980491043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f7fb6963db3%3A0x53db07f69d77a205!2sShayona%20Plaza!5e0!3m2!1sen!2sin!4v1734368065392!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.7374508555126!2d72.8819166!3d21.2025863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f9dcdfa2e81%3A0xe2fa4563993e6dc7!2sIcon%20Heights%2C%20Icon%20Heights%2C%20Canal%20Road%2C%20Royal%20Park%20Society%2C%20Yoginagar%20Society%2C%20Surat%2C%20Gujarat%20395010!5e0!3m2!1sen!2sin!4v1734549931572!5m2!1sen!2sin"
               width="100%"
               height="400"
               style={{ border: 0 }}
@@ -296,4 +296,3 @@ export default function Contact() {
     </>
   );
 }
-
