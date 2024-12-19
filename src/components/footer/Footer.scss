@@ -1,66 +1,80 @@
-footer{
+footer {
     display: flex;
     flex-direction: column;
     z-index: 99;
-    .footer{
+
+    .footer {
         background: #232930;
         display: flex;
         align-items: stretch;
         justify-content: space-between;
         padding: 50px 100px;
-        .footer-item{
+
+        .footer-item {
             display: flex;
             color: #ffffff;
             flex-direction: column;
             gap: 10px;
-            &.cutoff-width{
+
+            &.cutoff-width {
                 width: 400px;
                 max-width: 100%;
             }
-            img{
+
+            img {
                 width: 172px;
                 height: auto;
             }
-            a,span{
+
+            a,
+            span {
                 color: #aeabab;
                 font-size: 14px;
                 text-decoration: none;
                 line-height: 140%;
-                &.social-links{
+
+                &.social-links {
                     display: flex;
                     gap: 4px;
                     align-items: center;
-                    img{
+
+                    img {
                         width: 12px;
                         height: 12px;
                         filter: invert(.69);
                     }
                 }
-                &:hover:not(span){
+
+                &:hover:not(span) {
                     color: #ffffff;
                     transition: 0.3s ease-in-out;
-                    &.social-links img{
+
+                    &.social-links img {
                         filter: invert(1);
                     }
                 }
-                &.active{
+
+                &.active {
                     color: #E8E8E8;
-                   text-decoration: underline;
+                    text-decoration: underline;
                 }
             }
-            p{
+
+            p {
                 color: #ffffff;
                 font-size: 14px;
             }
         }
     }
-    .copyRight{
+
+    .copyRight {
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 10px;
         background: #2c3238;
-        p{
+
+        p {
             font-size: 14px;
             color: #aeabab;
         }
@@ -68,26 +82,27 @@ footer{
 }
 
 @media screen and (max-width:970px) {
-    footer .footer{
+    footer .footer {
         justify-content: center;
         align-items: center;
         flex-direction: column;
         flex-wrap: wrap;
         padding: 24px 16px;
         gap: 20px;
-        .footer-item{
+
+        .footer-item {
             justify-content: center;
             align-items: center;
-            p{
+
+            p {
                 text-align: center;
             }
         }
     }
 }
 
-@media screen and (min-width:768px) and (max-width: 1024px){
-    footer .footer{
+@media screen and (min-width:768px) and (max-width: 1024px) {
+    footer .footer {
         padding: 50px;
     }
-
 }

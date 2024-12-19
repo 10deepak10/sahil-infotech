@@ -283,7 +283,7 @@ export default function Contact() {
           <div className="map-container" data-aos="fade-up">
             <iframe
               title="Google Map Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.7374508555126!2d72.8819166!3d21.2025863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f9dcdfa2e81%3A0xe2fa4563993e6dc7!2sIcon%20Heights%2C%20Icon%20Heights%2C%20Canal%20Road%2C%20Royal%20Park%20Society%2C%20Yoginagar%20Society%2C%20Surat%2C%20Gujarat%20395010!5e0!3m2!1sen!2sin!4v1734549931572!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119066.54586602548!2d72.73989464502472!3d21.159180203574987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1734628369613!5m2!1sen!2sin"
               width="100%"
               height="400"
               style={{ border: 0 }}

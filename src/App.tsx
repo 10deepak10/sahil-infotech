@@ -15,9 +15,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Home />} />
           {/* <Route path="/portfolio" element={<Portfolio />} /> */}
         </Routes>
-        <ScrollToTop/>
+        <ScrollToTop />
         <Footer />
       </Router>
     </>
