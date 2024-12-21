@@ -70,6 +70,10 @@
       align-items: flex-start;
       background-color: transparent; 
       overflow: hidden;
+      .text{
+        text-align: left;
+
+      }
     
       &::before {
         content: '';

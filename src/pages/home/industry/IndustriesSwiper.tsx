@@ -21,33 +21,33 @@ const IndustriesSwiper = () => {
     <section className="industries-swiper section">
       <div className="section-title" data-aos="fade-up">
         <h2 className="heading3">Industries We Serve</h2>
-        <p className="text">Explore the industries we cater to with tailored solutions.</p>
+        <p className="text">Explore the industries we serve through tailored solutions specifically designed to address their unique challenges and requirements.</p>
       </div>
       <div className="swiper-container" data-aos="fade-up" data-aos-delay="50">
         <Swiper
           slidesPerView={5}
           spaceBetween={20}
           loop={true}
-          speed={10000}
           autoplay={{
-            delay: 0,
+            delay: 3000,
             disableOnInteraction: false,
           }}
           pagination={{
             clickable: true,
           }}
+
           navigation={true}
           modules={[Autoplay]}
           className="mySwiper"
           breakpoints={{
             // For mobile screens (max-width: 640px)
             0: {
-              slidesPerView: 2,
+              slidesPerView: 3,
               spaceBetween: 10,
             },
             // For tablets (max-width: 768px)
             640: {
-              slidesPerView: 3,
+              slidesPerView: 4,
               spaceBetween: 15,
             },
             // For larger screens

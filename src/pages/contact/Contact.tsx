@@ -149,7 +149,7 @@ export default function Contact() {
               </div>
             </a>
             <a
-              href="https://maps.app.goo.gl/DygiJbMVrx4NkMvh9"
+              href="https://maps.app.goo.gl/BimHPaHaiVv9N5ZG7"
               target="_blank"
               rel="noopener noreferrer"
               className="contact-card flex"

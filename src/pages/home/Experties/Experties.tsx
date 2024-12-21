@@ -101,9 +101,9 @@ const Experties = () => {
       data-aos="fade-up"
     >
       <h2>
-        Our Expertise in Various Technologies
+        Our Expertise In Various Technologies
         <span>
-        Leveraging advanced technologies to craft innovative solutions that empower businesses and drive industry-leading success.
+        Explore the industries we serve through tailored solutions specifically designed to address their unique challenges and requirements.
         </span>
       </h2>
 

@@ -64,7 +64,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <img src="../../../../media/icons/linkedin.svg" alt="facebook" />
-            linkedin
+            Linkedin
           </a>
         </div>
         <div className="footer-item">
