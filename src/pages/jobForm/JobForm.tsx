@@ -5,7 +5,9 @@ import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Banner from "../../components/Banner/Banner";
 import Dropdown from "../../components/dropdown/Dropdown";
+
 type ButtonState = "idle" | "sending" | "failed" | "success";
+
 const JobForm = () => {
   const { id } = useParams();
   const job = jobsData.find((job) => job.id === Number(id));
@@ -42,7 +44,7 @@ const JobForm = () => {
     }
   };
 
-  // Handle individual field changes
+  // Handle field changes
   const handleFieldChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -60,7 +62,7 @@ const JobForm = () => {
     });
   };
 
-  //  Validate full form before submit
+  // Validate entire form
   const validateForm = () => {
     const errors: Record<string, string> = {};
     const form = formRef.current;
@@ -119,30 +121,44 @@ const JobForm = () => {
     setStatus("Sending...");
 
     if (formRef.current) {
-      emailjs
-        .sendForm(
-          process.env.REACT_APP_EMAILJS_SERVICE_ID as string,
-          process.env.REACT_APP_EMAILJS_TEMPLATE_ID as string,
-          formRef.current!,
-          process.env.REACT_APP_EMAILJS_PUBLIC_KEY as string
-        )
-        .then(
-          () => {
-            setStatus("✅ Application sent successfully!");
-            setButtonState("success");
-            formRef.current?.reset();
-            setSelectedFile(null);
-          },
-          (error) => {
-            console.error(error);
-            setStatus("❌ Failed to send application. Please try again.");
-            setButtonState("failed");
-          }
-        );
+      const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID as string;
+      const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY as string;
+
+      const candidateTemplate = process.env.REACT_APP_TEMPLATE_AUTO_REPLY as string;
+      const internalTemplate = process.env.REACT_APP_TEMPLATE_INTERNAL as string;
+
+      // Send Auto-Reply to Candidate
+      const autoReply = emailjs.sendForm(
+        serviceID,
+        candidateTemplate,
+        formRef.current!,
+        publicKey
+      );
+
+      // Send Internal Notification to You
+      const internalNotification = emailjs.sendForm(
+        serviceID,
+        internalTemplate,
+        formRef.current!,
+        publicKey
+      );
+
+      Promise.all([autoReply, internalNotification])
+        .then(() => {
+          setStatus("✅ Application sent successfully!");
+          setButtonState("success");
+          formRef.current?.reset();
+          setSelectedFile(null);
+        })
+        .catch((error) => {
+          console.error("EmailJS error:", error);
+          setStatus("❌ Failed to send application. Please try again.");
+          setButtonState("failed");
+        });
     }
   };
 
-  // Button text & style based on state
+  // Button text & style
   const getButtonProps = () => {
     switch (buttonState) {
       case "sending":
