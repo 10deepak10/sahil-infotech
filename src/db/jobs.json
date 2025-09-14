@@ -1,0 +1,203 @@
+[
+  {
+    "id": 1,
+    "title": "Python Django Developer",
+    "location": "Surat, Gujarat",
+    "education": "Graduate",
+    "experience": { "min": 2, "max": 5 },
+    "responsibilities": [
+      "Write effective, scalable code",
+      "Develop back-end components to improve responsiveness and overall performance",
+      "Integrate user-facing elements into applications",
+      "Test and debug programs",
+      "Improve functionality of existing systems",
+      "Implement security and data protection solutions",
+      "Assess and prioritize feature requests",
+      "Coordinate with internal teams to understand user requirements and provide technical solutions"
+    ],
+    "skills": [
+      "Work experience as a Python Developer",
+      "Expertise in at least one popular Python framework (like Django, Machine Learning)",
+      "Knowledge of object-relational mapping (ORM)",
+      "Familiarity with front-end technologies (JavaScript, HTML5)",
+      "Team spirit",
+      "Good problem-solving skills",
+      "BSc in Computer Science, Engineering or relevant field"
+    ],
+    "keySkills": ["Django", "Machine Learning"]
+  },
+  {
+    "id": 2,
+    "title": "Business Development Executive",
+    "location": "Surat, Gujarat",
+    "education": "Graduate",
+    "experience": { "min": 1, "max": 3 },
+    "responsibilities": [
+      "Generate and qualify leads through cold calls, emails, and networking",
+      "Develop and execute sales strategies to acquire new clients",
+      "Build strong, long-lasting client relationships",
+      "Collaborate with marketing and sales teams to align strategies",
+      "Track sales progress and adjust strategies to meet targets",
+      "Conduct market research to identify trends and opportunities",
+      "Present product/service offerings effectively to potential clients",
+      "Negotiate contracts and close deals",
+      "Attend networking events and industry conferences",
+      "Stay up-to-date with industry trends and competitors"
+    ],
+    "skills": [
+      "Motivated self-starter with strong leadership skills",
+      "Excellent verbal and written communication",
+      "Ability to identify new growth opportunities",
+      "Experience in documentation for business development",
+      "Proficiency in English preferred"
+    ],
+    "keySkills": ["Communication"]
+  },
+  {
+    "id": 3,
+    "title": "Android Developer",
+    "location": "Surat, Gujarat",
+    "education": "Graduate",
+    "experience": { "min": 0, "max": 2 },
+    "responsibilities": [
+      "Conceptualize and formulate Android apps",
+      "Implement measures to safeguard users' data",
+      "Ensure construction and presentation of apps meets standards",
+      "Proofread and debug code before release",
+      "Collaborate with UI/UX designers and testers",
+      "Liaise with marketing for brand consistency",
+      "Monitor app reviews for improvements",
+      "Create app updates including bug fixes and new features"
+    ],
+    "skills": [
+      "BS/MS degree in Computer Science or related field",
+      "Proficiency in Java, C, or C++",
+      "Experience with Android Studio and SDK",
+      "Strong coding and proofreading skills",
+      "Excellent teamwork and communication skills",
+      "Ability to work independently"
+    ],
+    "keySkills": ["Java", "Kotlin", "Android Studio", "JSON", "API Parsing", "Layout Design", "Navigation"]
+  },
+  {
+    "id": 4,
+    "title": "Flutter Developer",
+    "location": "Surat, Gujarat",
+    "education": "Graduate",
+    "experience": { "min": 1, "max": 3 },
+    "responsibilities": [
+      "Translate requirements into clean, efficient code",
+      "Construct base engine for applications",
+      "Produce prototypes of features",
+      "Develop schedules and determine milestones",
+      "Generate scripts and storyboards",
+      "Animate characters and objects",
+      "Contribute to design and audio features",
+      "Create unit tests and validation procedures",
+      "Polish code, fix bugs, maintain performance"
+    ],
+    "skills": [
+      "Experience in full lifecycle app/game development",
+      "Hands-on with C++, Java, or similar",
+      "Knowledge of APIs and libraries",
+      "Expertise in AI, 3D rendering, networking, or audio",
+      "Strong creative problem-solving skills",
+      "Degree in Computer Science or Games Technology"
+    ],
+    "keySkills": ["Flutter", "Dart", "Android", "iOS", "SQLite", "Swift", "Objective-C", "Xcode"]
+  },
+  {
+    "id": 5,
+    "title": "MERN Stack Developer",
+    "location": "Surat, Gujarat",
+    "education": "Graduate",
+    "experience": { "min": 2, "max": 5 },
+    "responsibilities": [
+      "Design and build applications based on requirements",
+      "Develop front-end and back-end using Node, MongoDB, React/Angular, Express",
+      "Unit test for robustness and reliability",
+      "Write reusable, maintainable code",
+      "Integrate existing business tools",
+      "Create dynamic web pages",
+      "Mentor junior developers and review code"
+    ],
+    "skills": [
+      "Strong problem-solving skills",
+      "Knowledge of data structures and algorithms",
+      "Passion for robust, high-quality systems",
+      "Experience with RESTful APIs",
+      "Experience with Firebase and push notifications",
+      "Knowledge of cloud platforms (AWS, GCP, Azure)",
+      "Experience with GraphQL a plus"
+    ],
+    "keySkills": ["MongoDB", "Express", "React", "Node.js", "Redux", "GraphQL"]
+  },
+  {
+    "id": 6,
+    "title": "UI/UX Designer",
+    "location": "Surat, Gujarat",
+    "education": "Graduate",
+    "experience": { "min": 1, "max": 3 },
+    "responsibilities": [
+      "Proven UI/UX experience with a strong portfolio",
+      "Strong English communication skills",
+      "Understand user-centered design principles",
+      "Design responsive web and mobile solutions",
+      "Strong problem-solving and visual skills",
+      "Manage multiple projects with deadlines"
+    ],
+    "skills": [
+      "Lead design process from concept to delivery",
+      "Collaborate with cross-functional teams",
+      "Conduct user research and gather feedback",
+      "Develop and maintain design systems",
+      "Stay updated with latest UI/UX trends and tools"
+    ],
+    "keySkills": ["UI/UX", "Figma", "Adobe XD", "Responsive Design"]
+  },
+  {
+    "id": 7,
+    "title": "AI/ML Developer",
+    "location": "Surat, Gujarat",
+    "education": "CS, Data Science, Statistics",
+    "experience": { "min": 2, "max": 6 },
+    "responsibilities": [
+      "Design and deploy scalable ML models and AI algorithms",
+      "Collaborate with teams to define use cases",
+      "Preprocess data and perform feature engineering",
+      "Train, test, and optimize models",
+      "Monitor and maintain ML pipelines",
+      "Document workflows and results",
+      "Stay updated with latest AI/ML research"
+    ],
+    "skills": [
+      "Proficiency in Python and ML libraries (TensorFlow, PyTorch, scikit-learn, XGBoost)",
+      "Data manipulation with Pandas, NumPy, SQL",
+      "Knowledge of evaluation metrics",
+      "Experience with cloud platforms (AWS, Azure, GCP)",
+      "Strong problem-solving and communication skills"
+    ],
+    "keySkills": ["Python", "TensorFlow", "PyTorch", "ML", "AI", "SQL", "MLOps"]
+  },
+  {
+    "id": 8,
+    "title": "QA Tester",
+    "location": "Surat, Gujarat",
+    "education": "Graduate",
+    "experience": { "min": 0, "max": 2 },
+    "responsibilities": [
+      "Test gameplay, features, and levels for bugs",
+      "Report and track bugs using tools",
+      "Work closely with developers for fixes",
+      "Verify fixes and updates"
+    ],
+    "skills": [
+      "Attention to detail and analytical thinking",
+      "Familiarity with bug-tracking tools (Jira, Trello)",
+      "Basic knowledge of software testing",
+      "Understanding of gaming platforms",
+      "Strong written and verbal communication"
+    ],
+    "keySkills": ["Manual Testing", "Bug Tracking", "QA Tools"]
+  }
+]

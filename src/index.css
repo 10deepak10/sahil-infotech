@@ -18,11 +18,19 @@ body {
   overflow: hidden;
   overflow-y: auto;
 }
+
 div#root{
   width: 100%;
 }
+
 .theme-text {
   color: #091678 !important;
+}
+.full-width{
+  width: 100% !important;
+}
+.full-height{
+  height: 100%;
 }
 
 .container {
@@ -51,6 +59,9 @@ div#root{
 }
 .nowrap{
   flex-wrap: nowrap;
+}
+.wrap{
+  flex-wrap: wrap;
 }
 .j-between{
   justify-content: space-between;
@@ -99,6 +110,10 @@ div#root{
 
 .m-0{
   margin: 0 !important;
+}
+.my-10{
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* typography  */

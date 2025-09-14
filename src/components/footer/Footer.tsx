@@ -33,6 +33,12 @@ const Footer = () => {
           >
             Contact Us
           </NavLink>
+          <NavLink
+            to="/career"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Career
+          </NavLink>
         </div>
         <div className="footer-item">
           <h4>Contact us at</h4>

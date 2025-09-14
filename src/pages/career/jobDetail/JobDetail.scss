@@ -1,0 +1,107 @@
+.detail-container {
+    padding: 20px;
+}
+.m-auto{
+    margin: auto;
+}
+.job-banner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+
+  .job-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .job-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .job-banner-title {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+
+.job-detail {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    padding: 25px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    .job-title {
+        font-size: 26px;
+        font-weight: 600;
+        color: #222;
+        margin-bottom: 20px;
+    }
+
+    .job-meta {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            color: #444;
+
+            .meta-icon {
+                width: 22px;
+                height: 22px;
+                margin-right: 10px;
+                object-fit: contain;
+            }
+
+            .meta-value {
+                color: #555;
+            }
+        }
+    }
+}
+
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        color: #444;
+        font-size: 16px;
+        line-height: 1.5;
+
+        &::before {
+            content: "✔";
+            font-weight: bold;
+            color: #fff;
+            background-color: #091678;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            font-size: 14px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
