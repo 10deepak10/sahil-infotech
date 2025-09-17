@@ -16,7 +16,7 @@ const Footer = () => {
     <footer data-aos="fade-up">
       <div className="footer">
         <div className="footer-item cutoff-width">
-          <img src="../../../../media/logo-white.png" alt="sahil-logo" />
+          <img src="../../../../media/logo.png" alt="sahil-logo" />
           <p>
             We are a team of innovative developers at Sahil Infotech,
             building cutting-edge websites with the latest technologies

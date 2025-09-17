@@ -23,7 +23,10 @@ footer {
 
             img {
                 width: 172px;
-                height: auto;
+                height: 70px;
+                object-fit: cover;
+                filter: invert(1) brightness(200%);
+                mix-blend-mode: screen;
             }
 
             a,

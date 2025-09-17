@@ -11,13 +11,11 @@ type ButtonState = "idle" | "sending" | "failed" | "success";
 const JobForm = () => {
   const { id } = useParams();
   const job = jobsData.find((job) => job.id === Number(id));
-
   const defaultSubject = job ? job.title : "";
 
   const [status, setStatus] = useState("");
   const [buttonState, setButtonState] = useState<ButtonState>("idle");
   const formRef = useRef<HTMLFormElement>(null);
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
   const [selectedJob, setSelectedJob] = useState(job || null);
 
@@ -37,14 +35,21 @@ const JobForm = () => {
         return "";
       case "subject":
         return value.trim() ? "" : "Please select a job";
-      case "message":
-        return value.trim() ? "" : "Message is required";
+      case "letter":
+        return value.trim() ? "" : "cover Letter is required";
+      case "experience":
+        return value.trim() ? "" : "Experience is required";
+      case "currentCTC":
+        return value.trim() ? "" : "Current CTC is required";
+      case "expectedCTC":
+        return value.trim() ? "" : "Expected CTC is required";
+      case "noticePeriod":
+        return value.trim() ? "" : "Notice period is required";
       default:
         return "";
     }
   };
 
-  // Handle field changes
   const handleFieldChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -68,38 +73,25 @@ const JobForm = () => {
     const form = formRef.current;
     if (!form) return errors;
 
-    const firstName = (form.firstName as HTMLInputElement).value.trim();
-    const lastName = (form.lastName as HTMLInputElement).value.trim();
-    const email = (form.email as HTMLInputElement).value.trim();
-    const mobile = (form.mobile as HTMLInputElement).value.trim();
-    const subject = (form.subject as HTMLInputElement).value.trim();
-    const message = (form.message as HTMLTextAreaElement).value.trim();
+    const fields = [
+      "firstName",
+      "lastName",
+      "email",
+      "mobile",
+      "subject",
+      "letter",
+      "experience",
+      "currentCTC",
+      "expectedCTC",
+      "noticePeriod",
+    ];
 
-    if (!firstName) errors.firstName = "First name is required";
-    if (!lastName) errors.lastName = "Last name is required";
-    if (!email) errors.email = "Email is required";
-    if (!mobile) {
-      errors.mobile = "Mobile is required";
-    } else if (!/^\d{10}$/.test(mobile)) {
-      errors.mobile = "Enter a valid 10-digit mobile number";
-    }
-    if (!subject) errors.subject = "Please select a job";
-    if (!message) errors.message = "Message is required";
-
-    // File validation
-    if (!selectedFile) {
-      errors.attachment = "Resume file is required";
-    } else {
-      const allowedTypes = [
-        "application/pdf",
-        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-      ];
-      if (!allowedTypes.includes(selectedFile.type)) {
-        errors.attachment = "Only PDF or DOCX files are allowed";
-      } else if (selectedFile.size > 2 * 1024 * 1024) {
-        errors.attachment = "File size must be less than 2MB";
-      }
-    }
+    fields.forEach((field) => {
+      const value = (form[field as keyof HTMLFormElement] as HTMLInputElement)
+        ?.value.trim();
+      const error = validateField(field, value || "");
+      if (error) errors[field] = error;
+    });
 
     return errors;
   };
@@ -124,31 +116,20 @@ const JobForm = () => {
       const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID as string;
       const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY as string;
 
-      const candidateTemplate = process.env.REACT_APP_TEMPLATE_AUTO_REPLY as string;
-      const internalTemplate = process.env.REACT_APP_TEMPLATE_INTERNAL as string;
+      const candidateTemplate =
+        process.env.REACT_APP_TEMPLATE_AUTO_REPLY as string;
+      const internalTemplate =
+        process.env.REACT_APP_TEMPLATE_INTERNAL as string;
 
-      // Send Auto-Reply to Candidate
-      const autoReply = emailjs.sendForm(
-        serviceID,
-        candidateTemplate,
-        formRef.current!,
-        publicKey
-      );
-
-      // Send Internal Notification to You
-      const internalNotification = emailjs.sendForm(
-        serviceID,
-        internalTemplate,
-        formRef.current!,
-        publicKey
-      );
-
-      Promise.all([autoReply, internalNotification])
+      // Send Auto-Reply + Internal Notification
+      Promise.all([
+        emailjs.sendForm(serviceID, candidateTemplate, formRef.current!, publicKey),
+        emailjs.sendForm(serviceID, internalTemplate, formRef.current!, publicKey),
+      ])
         .then(() => {
           setStatus("✅ Application sent successfully!");
           setButtonState("success");
           formRef.current?.reset();
-          setSelectedFile(null);
         })
         .catch((error) => {
           console.error("EmailJS error:", error);
@@ -289,6 +270,57 @@ const JobForm = () => {
             </div>
           </div>
 
+          {/* Extra Job Form Fields */}
+          <div className="flex-row">
+            <div>
+              <input
+                type="text"
+                name="experience"
+                placeholder="Total Experience (in years)"
+                onChange={handleFieldChange}
+              />
+              {formErrors.experience && (
+                <p className="error-text">{formErrors.experience}</p>
+              )}
+            </div>
+            <div>
+              <input
+                type="text"
+                name="currentCTC"
+                placeholder="Current CTC"
+                onChange={handleFieldChange}
+              />
+              {formErrors.currentCTC && (
+                <p className="error-text">{formErrors.currentCTC}</p>
+              )}
+            </div>
+          </div>
+
+          <div className="flex-row">
+            <div>
+              <input
+                type="text"
+                name="expectedCTC"
+                placeholder="Expected CTC"
+                onChange={handleFieldChange}
+              />
+              {formErrors.expectedCTC && (
+                <p className="error-text">{formErrors.expectedCTC}</p>
+              )}
+            </div>
+            <div>
+              <input
+                type="text"
+                name="noticePeriod"
+                placeholder="Notice Period"
+                onChange={handleFieldChange}
+              />
+              {formErrors.noticePeriod && (
+                <p className="error-text">{formErrors.noticePeriod}</p>
+              )}
+            </div>
+          </div>
+
           <Dropdown
             name="subject"
             defaultValue={defaultSubject}
@@ -297,7 +329,6 @@ const JobForm = () => {
               const foundJob = jobsData.find((j) => j.title === value);
               setSelectedJob(foundJob || null);
 
-              // validate subject dynamically
               const error = validateField("subject", value);
               setFormErrors((prev) => {
                 const newErrors = { ...prev };
@@ -313,80 +344,13 @@ const JobForm = () => {
 
           <div>
             <textarea
-              name="message"
-              placeholder="Your message"
+              name="letter"
+              placeholder="Cover Letter"
               rows={5}
               onChange={handleFieldChange}
             ></textarea>
-            {formErrors.message && (
-              <p className="error-text">{formErrors.message}</p>
-            )}
-          </div>
-
-          {/* File Upload */}
-          <div className="file-upload">
-            {!selectedFile ? (
-              <label className="upload-label">
-                Upload Resume
-                <input
-                  type="file"
-                  name="attachment"
-                  onChange={(e) => {
-                    const file = e.target.files?.[0];
-                    if (file) {
-                      const allowedTypes = [
-                        "application/pdf",
-                        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                      ];
-                      const maxSize = 2 * 1024 * 1024;
-
-                      if (!allowedTypes.includes(file.type)) {
-                        setFormErrors((prev) => ({
-                          ...prev,
-                          attachment: "Only PDF or DOCX files are allowed",
-                        }));
-                        e.target.value = "";
-                        return;
-                      }
-                      if (file.size > maxSize) {
-                        setFormErrors((prev) => ({
-                          ...prev,
-                          attachment: "File size must be less than 2MB",
-                        }));
-                        e.target.value = "";
-                        return;
-                      }
-
-                      setSelectedFile(file);
-                      setFormErrors((prev) => {
-                        const newErrors = { ...prev };
-                        delete newErrors.attachment;
-                        return newErrors;
-                      });
-                    }
-                  }}
-                />
-              </label>
-            ) : (
-              <div className="file-preview">
-                <span className="file-name">{selectedFile.name}</span>
-                <button
-                  type="button"
-                  className="delete-btn"
-                  onClick={() => {
-                    setSelectedFile(null);
-                    setFormErrors((prev) => ({
-                      ...prev,
-                      attachment: "Resume file is required",
-                    }));
-                  }}
-                >
-                  ❌
-                </button>
-              </div>
-            )}
-            {formErrors.attachment && (
-              <p className="error-text">{formErrors.attachment}</p>
+            {formErrors.letter && (
+              <p className="error-text">{formErrors.letter}</p>
             )}
           </div>
 
