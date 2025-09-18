@@ -37,7 +37,7 @@ function App() {
               "@type": "Organization",
               name: "Sahil Infotech",
               url: "https://www.sahilinfotech.com",
-              logo: "https://www.sahilinfotech.com/media/logo-white.png",
+              logo: "https://www.sahilinfotech.com/media/logo.png",
               contactPoint: [
                 {
                   "@type": "ContactPoint",

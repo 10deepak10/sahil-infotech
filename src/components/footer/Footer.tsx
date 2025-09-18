@@ -81,12 +81,12 @@ const Footer = () => {
             </span>
           {/* </a> */}
           {/* <a
-            href="mailto:sahilinfotech@yahoo.com"
+            href="mailto:info@sahilinfotech.com"
             target="_blank"
             rel="noopener noreferrer"
           > */}
             <span>
-            sahilinfotech@yahoo.com
+            info@sahilinfotech.com
             </span>
           {/* </a> */}
         </div>

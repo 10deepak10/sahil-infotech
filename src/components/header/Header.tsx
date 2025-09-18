@@ -61,7 +61,7 @@ const Header = () => {
             </li>
             <li className="sms menu_btns">
               <a
-                href="mailto:sahilinfotech@yahoo.com"
+                href="mailto:info@sahilinfotech.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex j-center"
@@ -110,7 +110,7 @@ const Header = () => {
                   </NavLink>
                   <NavLink to="/career" onClick={toggleModal}>
                     <img
-                      src="../../../../media/icons/career.svg"
+                      src="../../../../media/icons/education.svg"
                       alt="career"
                       width="18"
                       height="18"

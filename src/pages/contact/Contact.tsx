@@ -80,7 +80,7 @@ export default function Contact() {
       const subject = `Message from ${formData.firstName} ${formData.lastName}`;
       const body = `Name: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nMessage:\n${formData.message}`;
 
-      const mailtoLink = `mailto:sahilinfotech@yahoo.com?subject=${encodeURIComponent(
+      const mailtoLink = `mailto:info@sahilinfotech.com?subject=${encodeURIComponent(
         subject
       )}&body=${encodeURIComponent(body)}`;
 
@@ -109,7 +109,7 @@ export default function Contact() {
         <div className="flex gap-40 strech-content">
           <div className="flex-col gap-30 contact-card-container">
             <a
-              href="mailto:sahilinfotech@yahoo.com"
+              href="mailto:info@sahilinfotech.com"
               target="_blank"
               rel="noopener noreferrer"
               className="contact-card flex"
@@ -125,7 +125,7 @@ export default function Contact() {
               </div>
               <div className="flex-col info">
                 <h6 className="heading6">Email Us</h6>
-                <p className="description">sahilinfotech@yahoo.com</p>
+                <p className="description">info@sahilinfotech.com</p>
               </div>
             </a>
             <a
@@ -279,12 +279,13 @@ export default function Contact() {
           <p className="description">
             Found Us on <strong className="text-green">Google</strong> Maps
           </p>
+          
 
           <div className="map-container" data-aos="fade-up">
             <iframe
               title="Google Map Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119066.54586602548!2d72.73989464502472!3d21.159180203574987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1734628369613!5m2!1sen!2sin"
-              width="100%"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.4620328626966!2d72.8824073753309!3d21.213519481407026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0e70d83f2d%3A0xc013dea3bcef1fe9!2sSahil%20Infotech!5e0!3m2!1sen!2sin!4v1758154147584!5m2!1sen!2sin"
+               width="100%"
               height="400"
               style={{ border: 0 }}
               allowFullScreen={true}

@@ -63,7 +63,7 @@ const JobDetail = () => {
               "@type": "Organization",
               name: "Sahil Infotech",
               sameAs: "https://www.sahilinfotech.com",
-              logo: "https://www.sahilinfotech.com/media/logo-white.png",
+              logo: "https://www.sahilinfotech.com/media/logo.png",
             },
             jobLocation: {
               "@type": "Place",
