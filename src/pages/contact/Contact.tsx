@@ -4,6 +4,11 @@ import "./Contact.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Banner from "../../components/Banner/Banner";
+import ReviewSlider from "../../components/reviewSlider/ReviewSlider";
+import GridBlock from "../../components/gridBlock/GridBlock";
+import Dropdown from "../../components/dropdown/Dropdown";
+import serviceData from "../../db/services.json";
+import { useSearchParams, useNavigate } from "react-router-dom";
 
 type FormFields = {
   firstName: string;
@@ -11,6 +16,7 @@ type FormFields = {
   email: string;
   phone: string;
   message: string;
+  service: string;
 };
 
 export default function Contact() {
@@ -21,12 +27,16 @@ export default function Contact() {
       once: false,
     });
   }, []);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     phone: "",
     message: "",
+    service: "",
   });
 
   const [errors, setErrors] = useState<FormFields>({
@@ -35,7 +45,31 @@ export default function Contact() {
     email: "",
     phone: "",
     message: "",
+    service: "",
   });
+  const guideline = [
+    {
+      id: 1,
+      title: "Connect with Us",
+      img: "/media/icons/contact.svg",
+      description:
+        "Reach out to us to discuss your project vision and start the journey towards innovative solutions and impactful results.",
+    },
+    {
+      id: 2,
+      title: "Requirement Analysis",
+      img: "/media/icons/vector.svg",
+      description:
+        "We’ll analyze your requirements in detail, ensuring we understand your goals and craft a tailored plan for success.",
+    },
+    {
+      id: 3,
+      title: "Final Project Estimate",
+      img: "/media/icons/clock.svg",
+      description:
+        "Receive a comprehensive project estimate based on detailed analysis, outlining the scope, costs, and timelines for your approval.",
+    },
+  ];
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -52,6 +86,7 @@ export default function Contact() {
       email: "",
       phone: "",
       message: "",
+      service: "",
     };
 
     if (!formData.firstName.trim())
@@ -68,6 +103,8 @@ export default function Contact() {
     } else if (!/^\d+$/.test(formData.phone)) {
       newErrors.phone = "Phone number must be numeric.";
     }
+    if (!formData.service.trim())
+      newErrors.service = "Please select a service.";
     if (!formData.message.trim()) newErrors.message = "Message is required.";
 
     setErrors(newErrors);
@@ -92,10 +129,24 @@ export default function Contact() {
         email: "",
         phone: "",
         message: "",
+        service: "",
       });
     }
   };
-
+  useEffect(() => {
+    const serviceFromQuery = searchParams.get("service");
+    if (serviceFromQuery) {
+      // Find exact service title from your data
+      const matchedService = serviceData.find(
+        (s) =>
+          s.title.toLowerCase().replace(/[\s/]+/g, "-") ===
+          serviceFromQuery.toLowerCase()
+      );
+      if (matchedService) {
+        setFormData((prev) => ({ ...prev, service: matchedService.title }));
+      }
+    }
+  }, [searchParams]);
   return (
     <>
       <Banner
@@ -106,69 +157,93 @@ export default function Contact() {
         }
       />
       <div className="container contact-main-container gap-80 py-40">
-        <div className="flex gap-40 strech-content">
-          <div className="flex-col gap-30 contact-card-container">
-            <a
-              href="mailto:info@sahilinfotech.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-card flex"
-              data-aos="fade-right"
-            >
-              <div className="icon-circle">
-                <img
-                  src="media/icons/sms.svg"
-                  alt="call"
-                  width="24"
-                  height="24"
+        <div className="flex gap-40 strech-content mob-reverse">
+          <div className="contact-card-container">
+            {!formData.service && (
+              // Default block if no service is selected
+              <div className="flex-col gap-30 full-height">
+                <a
+                  href="mailto:info@sahilinfotech.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-card flex"
+                  data-aos="fade-right"
+                >
+                  <div className="icon-circle">
+                    <img
+                      src="media/icons/sms.svg"
+                      alt="call"
+                      width="24"
+                      height="24"
+                    />
+                  </div>
+                  <div className="flex-col info">
+                    <h6 className="heading6">Email Us</h6>
+                    <p className="description">info@sahilinfotech.com</p>
+                  </div>
+                </a>
+
+                <a
+                  href="tel:+919016738858"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-card flex"
+                  data-aos="fade-right"
+                >
+                  <div className="icon-circle">
+                    <img
+                      src="media/icons/call.svg"
+                      alt="call"
+                      width="24"
+                      height="24"
+                    />
+                  </div>
+                  <div className="flex-col info">
+                    <h6 className="heading6">Our hotline number</h6>
+                    <p className="description">+91 90167-38858</p>
+                  </div>
+                </a>
+
+                <a
+                  href="https://maps.app.goo.gl/BimHPaHaiVv9N5ZG7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-card flex"
+                  data-aos="fade-right"
+                >
+                  <div className="icon-circle">
+                    <img
+                      src="media/icons/location.svg"
+                      alt="call"
+                      width="24"
+                      height="24"
+                    />
+                  </div>
+                  <div className="flex-col info">
+                    <h6 className="heading6">Found Us</h6>
+                    <p className="description">Surat, Gujarat, India</p>
+                  </div>
+                </a>
+              </div>
+            )}
+
+            {formData.service && (
+              <div className="contact-service-data" key={formData.service}>
+                <GridBlock
+                  gridAnimation="fade-right"
+                  heading={""}
+                  subText=""
+                  navigateto={"/service/"}
+                  items={[
+                    serviceData.find(
+                      (item) => item.title === formData.service
+                    ) as any,
+                  ]}
                 />
               </div>
-              <div className="flex-col info">
-                <h6 className="heading6">Email Us</h6>
-                <p className="description">info@sahilinfotech.com</p>
-              </div>
-            </a>
-            <a
-              href="tel:+919016738858"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-card flex"
-              data-aos="fade-right"
-            >
-              <div className="icon-circle">
-                <img
-                  src="media/icons/call.svg"
-                  alt="call"
-                  width="24"
-                  height="24"
-                />
-              </div>
-              <div className="flex-col info">
-                <h6 className="heading6">Our hotline number</h6>
-                <p className="description">+91 90167-38858</p>
-              </div>
-            </a>
-            <a
-              href="https://maps.app.goo.gl/BimHPaHaiVv9N5ZG7"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-card flex"
-              data-aos="fade-right"
-            >
-              <div className="icon-circle">
-                <img
-                  src="media/icons/location.svg"
-                  alt="call"
-                  width="24"
-                  height="24"
-                />
-              </div>
-              <div className="flex-col info">
-                <h6 className="heading6">Found Us</h6>
-                <p className="description">Surat, Gujarat, India</p>
-              </div>
-            </a>
+            )}
           </div>
+
           <form
             className="flex-col contact-form"
             onSubmit={handleSubmit}
@@ -207,6 +282,23 @@ export default function Contact() {
                     <small className="error">{errors.lastName}</small>
                   )}
                 </div>
+              </div>
+              <div className="input-filed p-relative full-width">
+                <Dropdown
+                  name="service"
+                  value={formData.service}
+                  data={serviceData}
+                  required={false}
+                  onChange={(value: string) => {
+                    setFormData((prev) => ({ ...prev, service: value }));
+                    setErrors((prev) => ({ ...prev, service: "" }));
+                    const param = value.toLowerCase().replace(/[\s/]+/g, "-");
+                    setSearchParams({ service: param });
+                  }}
+                />
+                {errors.service && (
+                  <small className="error">{errors.service}</small>
+                )}
               </div>
               <div className="flex field-section">
                 <div className="input-filed">
@@ -272,6 +364,7 @@ export default function Contact() {
             </button>
           </form>
         </div>
+        <ReviewSlider />
 
         {/* Google Map Embed */}
         <div className="container align-start gap-12" data-aos="fade-up">
@@ -279,13 +372,12 @@ export default function Contact() {
           <p className="description">
             Found Us on <strong className="text-green">Google</strong> Maps
           </p>
-          
 
           <div className="map-container" data-aos="fade-up">
             <iframe
               title="Google Map Location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.4620328626966!2d72.8824073753309!3d21.213519481407026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0e70d83f2d%3A0xc013dea3bcef1fe9!2sSahil%20Infotech!5e0!3m2!1sen!2sin!4v1758154147584!5m2!1sen!2sin"
-               width="100%"
+              width="100%"
               height="400"
               style={{ border: 0 }}
               allowFullScreen={true}
@@ -293,6 +385,8 @@ export default function Contact() {
             ></iframe>
           </div>
         </div>
+
+        <GridBlock heading="So What Next?" subText="" items={guideline} />
       </div>
     </>
   );

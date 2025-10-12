@@ -2,7 +2,11 @@ import { useEffect, useState } from "react";
 import "./Experties.scss";
 import AOS from "aos";
 
-const Experties = () => {
+interface ExpertiesProps {
+  selectedKey?: string; // optional prop to filter view
+}
+
+const Experties: React.FC<ExpertiesProps> = ({ selectedKey }) => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -11,11 +15,10 @@ const Experties = () => {
     });
   }, []);
 
-  const [activeTab, setActiveTab] = useState("UI/UX");
+  const [activeTab, setActiveTab] = useState(selectedKey || "UI/UX");
 
   const content: { [key: string]: string[] } = {
-    
-    'UI/UX': [
+    "UI/UX": [
       "Figma.png",
       "Canva.png",
       "Photoshop.png",
@@ -29,7 +32,7 @@ const Experties = () => {
       "Vue.png",
       "angular.jpg",
       "javascript.jpg",
-      'typeScript.png',
+      "typeScript.png",
       "bootstrap.jpg",
       "Tailwind.png",
     ],
@@ -42,7 +45,7 @@ const Experties = () => {
       "SpringBoot.png",
       "laravel.jpg",
       "php.jpg",
-      "java.jpg"
+      "java.jpg",
     ],
     "AI/ML": [
       "Python.png",
@@ -81,19 +84,58 @@ const Experties = () => {
       "Microsoft SQl Server.png",
       "postgreaql.png",
       "mongodb.png",
-
       "Redis.png",
       "Elasticsearch.png",
       "Apache Cassandra.png",
-
-
-      // "sql lite.png",
-      // "Scikit-learn.png",
-      // "Phpmyadmin.png",
-      // "maria db.png",
-      // "amazon dynamodb.png",
     ],
   };
+
+  const activeContent = content[activeTab];
+
+  // Custom headings & descriptions for each expertise area
+  const headings: { [key: string]: { title: string; description: string } } = {
+    "UI/UX": {
+      title: "Mastering UI/UX Design",
+      description:
+        "Crafting visually appealing and user-centric interfaces that drive seamless digital experiences.",
+    },
+    "Frontend": {
+      title: "Frontend Development Excellence",
+      description:
+        "Building interactive, responsive, and modern web interfaces with the latest technologies.",
+    },
+    "Backend": {
+      title: "Robust Backend Architecture",
+      description:
+        "Developing scalable and efficient backend systems to power secure and fast web applications.",
+    },
+    "AI/ML": {
+      title: "Artificial Intelligence & Machine Learning",
+      description:
+        "Leveraging data-driven intelligence to create smart, predictive, and automated systems.",
+    },
+    "DevOps": {
+      title: "DevOps & Cloud Engineering",
+      description:
+        "Streamlining deployment pipelines, ensuring scalability, and maintaining efficient cloud infrastructure.",
+    },
+    "Database": {
+      title: "Database Management & Optimization",
+      description:
+        "Designing and optimizing databases for high performance, security, and reliability.",
+    },
+  };
+
+  const defaultHeading = {
+    title: "Our Expertise In Various Technologies",
+    description:
+      "Explore the industries we serve through tailored solutions specifically designed to address their unique challenges and requirements.",
+  };
+
+  const currentHeading =
+    selectedKey && headings[selectedKey]
+      ? headings[selectedKey]
+      : defaultHeading;
 
   return (
     <div
@@ -101,42 +143,42 @@ const Experties = () => {
       data-aos="fade-up"
     >
       <h2>
-        Our Expertise In Various Technologies
-        <span>
-        Explore the industries we serve through tailored solutions specifically designed to address their unique challenges and requirements.
-        </span>
+        {currentHeading.title}
+        <span>{currentHeading.description}</span>
       </h2>
 
-      <div className="tab-container">
-        <div className="tabs">
-          {Object.keys(content).map((tab) => (
-            <div
-              key={tab}
-              className={`tab ${activeTab === tab ? "active" : ""}`}
-              onClick={() => setActiveTab(tab)}
-            >
-              {tab}
-            </div>
-          ))}
+      {/* Hide tab navigation if selectedKey prop is passed */}
+      {!selectedKey && (
+        <div className="tab-container">
+          <div className="tabs">
+            {Object.keys(content).map((tab) => (
+              <div
+                key={tab}
+                className={`tab ${activeTab === tab ? "active" : ""}`}
+                onClick={() => setActiveTab(tab)}
+              >
+                {tab}
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
+
       <div className="tab-content">
-        {Array(content[activeTab]) ? (
+        {Array.isArray(activeContent) ? (
           <div className="card-container">
-            {(content[activeTab]).map(
-              (image, index) => (
-                <div className="card" key={index}>
-                  <img
-                    src={`../../../../media/experties_images/${image}`}
-                    alt={image}
-                  />
-                </div>
-              )
-            )}
+            {activeContent.map((image, index) => (
+              <div className="card" key={index}>
+                <img
+                  src={`../../../../media/experties_images/${image}`}
+                  alt={image}
+                />
+              </div>
+            ))}
           </div>
         ) : (
           <div className="card">
-            <p>{content[activeTab]}</p>
+            <p>{activeContent}</p>
           </div>
         )}
       </div>

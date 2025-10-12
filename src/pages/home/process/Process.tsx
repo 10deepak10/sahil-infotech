@@ -1,59 +1,50 @@
+import React from "react";
 import "./Process.scss";
 
-const Process = () => {
-  const ourProcess = [
-    {
-      id: 1,
-      title: "Understand & Recommend",
-      img: "/media/icons/human-resources.svg",
-      description:
-        "We constantly aspire to break boundaries by understanding our clients' requirements and striving to deliver tailored solutions that meet their needs, helping them achieve success with scalable, efficient, and innovative strategies.",
-    },
-    {
-      id: 2,
-      img: "/media/images/arrow-right.png",
-    },
-    {
-      id: 3,
-      title: "Strategy & Planning",
-      img: "/media/icons/web-development.svg",
-      description:
-        "Understanding the challenges organizations face, we are committed to equipping our clients with scalable, efficient, and innovative computing services through the application of the best strategies.",
-    },
-    {
-      id: 4,
-      img: "/media/images/arrow-right.png",
-    },
-    {
-      id: 5,
-      title: "Design & Develop",
-      img: "/media/icons/vector.svg",
-      description:
-        "With a team of highly skilled designers and developers, we meet the criteria for UX/UI software design, API integrations, backend development, and frontend development (Angular, React, Vue.js, etc.). Our excellent problem solvers are dedicated to adding value to your organization.",
-    },
+interface ProcessStep {
+  step: number;
+  title: string;
+  img?: string;
+  description: string;
+}
 
-    {
-      id: 6,
-      title: "Marketing Recommendation",
-      img: "/media/icons/marketing.svg",
-      description: "Our experts leverage top marketing strategies and tactics to maximize your marketing investment, ensuring the highest return by creating targeted solutions that drive growth and achieve your business objectives effectively.",
-    },
-    {
-      id: 7,
-      img: "/media/images/arrow-left.png",
-    },
-    {
-      id: 8,
-      title: "Testing & Launch",
-      img: "/media/icons/launch.svg",
-      description: "Testing and validation are crucial. We have a dedicated team of testers who create test scenarios, catch regressions, and produce automated integration, unit, and UI tests.",
-    },
-    {
-      id: 9,
-      img: "/media/images/arrow-bottom.png",
-    },
-    // Add more projects as needed
-  ];
+interface ProcessProps {
+  ourProcess: ProcessStep[];
+  arrowOrder?: string[]; // e.g. ["→", "→", "_", "←", "↓"]
+}
+
+const Process: React.FC<ProcessProps> = ({ ourProcess, arrowOrder = [] }) => {
+  // ✅ Detect desktop view
+  const [isDesktop, setIsDesktop] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleResize = () => setIsDesktop(window.innerWidth > 1024);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // ✅ Reverse data after 3rd item on desktop
+  const processedData = React.useMemo(() => {
+    if (!isDesktop) return ourProcess;
+    const firstHalf = ourProcess.slice(0, 3);
+    const secondHalf = ourProcess.slice(3).reverse();
+    return [...firstHalf, ...secondHalf];
+  }, [ourProcess, isDesktop]);
+
+  // ✅ Helper: map symbol → image path
+  const getArrowImage = (symbol: string | undefined) => {
+    switch (symbol) {
+      case "→":
+        return "/media/images/arrow-right.png";
+      case "←":
+        return "/media/images/arrow-left.png";
+      case "↓":
+        return "/media/images/arrow-bottom.png";
+      default:
+        return null;
+    }
+  };
 
   return (
     <div className="process_container">
@@ -61,39 +52,62 @@ const Process = () => {
         <div className="title flex-col gap-16" data-aos="fade-up">
           <h3 className="heading3">Our Way of Working</h3>
           <p className="sub-title">
-          We implement result-driven strategies tailored to meet your business needs and goals. We offer solutions designed to empower your business and help you achieve your desired outcomes.
+            We implement result-driven strategies tailored to meet your business
+            needs and goals. We offer solutions designed to empower your
+            business and help you achieve your desired outcomes.
           </p>
         </div>
+
         <div className="process_wrapper" data-aos="fade-up" data-aos-delay="50">
-          {ourProcess.map((item) =>
-            item.title ? (
-              <div
-                key={item.id}
-                style={
-                  { "--card-bg": `url(${item.img})` } as React.CSSProperties
-                }
-                className="process_card flex-col gap-16"
-              >
-                <img src={item.img} alt={item.title} height={100} width={100} />
-                <h4 className="text f-18 bold">{item.title}</h4>
-                <p className="text">{item.description}</p>
-              </div>
-            ) : (
-              <div
-                key={item.id}
-                className={
-                  item.id === 9 ? "card-flow align-start" : "card-flow"
-                }
-              >
-                <img
-                  src={item.img}
-                  alt="Default placeholder"
-                  height={100}
-                  width={100}
-                />
-              </div>
-            )
-          )}
+          {processedData.map((item, index) => {
+            const arrowSymbol = arrowOrder[index];
+            const arrowImg = getArrowImage(arrowSymbol);
+
+            const shouldRenderArrow =
+              (arrowImg || arrowSymbol === "_") &&
+              (index < processedData.length - 1 || arrowSymbol === "↓");
+
+            return (
+              <React.Fragment key={item.step}>
+                {/* CARD */}
+                <div
+                  className="process_card flex-col gap-16"
+                  style={
+                    { "--card-bg": `url(${item.img || ""})` } as React.CSSProperties
+                  }
+                >
+                  {item.img ? (
+                    <img src={item.img} alt={item.title} height={100} width={100} />
+                  ) : (
+                    <div className="fallback-number">{item.step}</div>
+                  )}
+                  <h4 className="text f-18 bold">{item.title}</h4>
+                  <p className="text">{item.description}</p>
+                </div>
+
+                {/* ARROW / SPACER */}
+                {shouldRenderArrow && (
+                  <div
+                    className={`card-flow ${
+                      arrowSymbol === "↓" ? "vertical-flow" : ""
+                    }`}
+                  >
+                    {arrowImg ? (
+                      <img
+                        src={arrowImg}
+                        alt={`arrow-${arrowSymbol}`}
+                        height={100}
+                        width={100}
+                      />
+                    ) : (
+                      // spacer for "_"
+                      <div className="arrow-spacer" />
+                    )}
+                  </div>
+                )}
+              </React.Fragment>
+            );
+          })}
         </div>
       </div>
     </div>

@@ -1,28 +1,44 @@
 import { useState, useRef, useEffect } from "react";
-import jobsData from "../../db/jobs.json";
 import "./Dropdown.scss";
 
+
 interface DropdownProps {
-  defaultValue?: string;
+  value?: string;                // ✅ controlled value
+  defaultValue?: string;         // fallback for uncontrolled
+  data: Data[];
   name: string;
   required?: boolean;
-  onChange?: (value: string) => void; //  added
+  onChange?: (value: string) => void;
+}
+interface Data {
+  id: string | number;
+  title: string;
 }
 
 const Dropdown: React.FC<DropdownProps> = ({
+  value,
   defaultValue,
+  data,
   name,
   required = false,
   onChange,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState(defaultValue || "");
+
+  // Internal state (only used when value is not controlled)
+  const [internalSelected, setInternalSelected] = useState(defaultValue || "");
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Decide the actual selected value
+  const selected = value !== undefined ? value : internalSelected;
 
   // Close when clicking outside
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(e.target as Node)
+      ) {
         setIsOpen(false);
       }
     };
@@ -30,12 +46,13 @@ const Dropdown: React.FC<DropdownProps> = ({
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const handleSelect = (value: string) => {
-    setSelected(value);
-    setIsOpen(false);
-    if (onChange) {
-      onChange(value); // 🔥 notify parent
+  const handleSelect = (val: string) => {
+    if (value === undefined) {
+      // uncontrolled → update local state
+      setInternalSelected(val);
     }
+    setIsOpen(false);
+    onChange?.(val); // notify parent always
   };
 
   return (
@@ -48,14 +65,14 @@ const Dropdown: React.FC<DropdownProps> = ({
         className={`dropdown-toggle ${isOpen ? "open" : ""}`}
         onClick={() => setIsOpen(!isOpen)}
       >
-        {selected || "Select Position"}
+        {selected || "Select " + name}
         <span className="arrow">{isOpen ? "▲" : "▼"}</span>
       </div>
 
       {/* Options */}
       {isOpen && (
         <ul className="dropdown-menu">
-          {jobsData.map((job) => (
+          {data.map((job) => (
             <li
               key={job.id}
               className={selected === job.title ? "active" : ""}

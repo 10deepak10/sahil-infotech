@@ -1,0 +1,35 @@
+.service-detail {
+  text-align: center;
+
+  .back-btn {
+    background: none;
+    border: none;
+    color: #1f7a8c;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .service-card {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+
+    .service-logo {
+      margin-bottom: 16px;
+    }
+
+    .heading2 {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .description {
+      font-size: 16px;
+      color: #333;
+    }
+  }
+}

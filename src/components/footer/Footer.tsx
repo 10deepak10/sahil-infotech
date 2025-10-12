@@ -26,6 +26,7 @@ const Footer = () => {
         <div className="footer-item">
           <h4>Company</h4>
           <NavLink to="/">Home</NavLink>
+          <NavLink to="/service">Services</NavLink>
           {/* <Link to="/portfolio">Portfolio</Link> */}
           <NavLink
             to="/contact"

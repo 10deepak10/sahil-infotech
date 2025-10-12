@@ -10,6 +10,8 @@
         max-width: 500px;
         flex-wrap: nowrap;
         color: #383838;
+        flex-grow: 1;
+        align-items: center;
 
         .icon-circle {
             display: flex;
@@ -37,15 +39,17 @@
                 line-height: 130%;
             }
         }
-        &:hover{
-            .icon-circle img{
+
+        &:hover {
+            .icon-circle img {
                 transform: rotateY(360deg);
             }
         }
+
         &:not(:hover) .icon-circle img {
-            transition: none; 
+            transition: none;
         }
-    
+
 
     }
 }
@@ -101,22 +105,24 @@
                     // min-height: 80px;
                 }
 
-                .error {
-                    position: absolute;
-                    top: 100%;
-                    color: #DA0505;
-                    margin-top: 2px;
-                    display: block;
-                    font-size: 14px;
-                    font-weight: 400;
-                    line-height: 120%;
 
-                }
             }
 
         }
 
     }
+}
+
+.error {
+    position: absolute;
+    top: 100%;
+    color: #DA0505;
+    margin-top: 2px;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%;
+
 }
 
 .map-container {
@@ -194,5 +200,24 @@
 
     .map-container {
         padding: 16px;
+    }
+}
+
+.contact-service-data {
+    .py-40 {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .gap-50 {
+        gap: 10px;
+    }
+
+    .heading3 {
+        font-size: 30px;
+        text-align: left;
+    }
+    .grid_card{
+        box-shadow: none;
     }
 }

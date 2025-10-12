@@ -8,9 +8,11 @@ const JobDetail = () => {
   const job = jobsData.find((job) => job.id === Number(id));
   const navigate = useNavigate();
 
-  const handleNavigate = (id: string | number) => {
-    navigate(`/apply/${id}`);
-  };
+  const handleNavigate = (id: string | number, title: string) => {
+  const slug = title.toLowerCase().replace(/[\s/]+/g, "-");
+  navigate(`/apply-for/${id}?title=${slug}`);
+};
+
 
   if (!job) {
     return (
@@ -162,7 +164,7 @@ const JobDetail = () => {
           {/* Apply Now */}
           <button
             className="cta-btn fit-width m-auto"
-            onClick={() => handleNavigate(job.id)}
+            onClick={() => handleNavigate(job.id, job.title)}
             data-aos="fade-up"
           >
             Apply Now

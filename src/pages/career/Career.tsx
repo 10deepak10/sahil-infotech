@@ -16,7 +16,7 @@ const Career = () => {
   return (
     <>
       <div className="career_container">
-        <div className="container text-center gap-50 py-40">
+        <div className="container min-h-60 j-center text-center gap-50 py-40">
           <div
             className="title align-center flex-col gap-16"
             data-aos="fade-up"
@@ -43,11 +43,6 @@ const Career = () => {
               />
             </button>
           </div>
-          <div
-            className="career_wrapper"
-            data-aos="fade-up"
-            data-aos-delay="50"
-          ></div>
         </div>
       </div>
       <Experience />

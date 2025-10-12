@@ -9,6 +9,8 @@ import ScrollToTop from "./components/scrollToTop/ScrollToTop";
 import Career from "./pages/career/Career";
 import JobDetail from "./pages/career/jobDetail/JobDetail";
 import JobForm from "./pages/jobForm/JobForm";
+import ServiceDetail from "./pages/serviceDetail/ServiceDetail";
+import Service from "./pages/service/Service";
 
 function App() {
   return (
@@ -62,7 +64,9 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/career" element={<Career />} />
           <Route path="/job-detail/:id/:slug" element={<JobDetail />} />
-          <Route path="/apply/:id?" element={<JobForm />} />
+          <Route path="/apply-for/:id?" element={<JobForm />} />
+          <Route path="/service" element={<Service />} />
+          <Route path="/service/:title" element={<ServiceDetail />} />
           {/* <Route path="/portfolio" element={<Portfolio />} /> */}
           <Route path="*" element={<Home />} />
         </Routes>

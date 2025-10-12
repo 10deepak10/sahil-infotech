@@ -31,6 +31,12 @@ const Header = () => {
               Home
             </NavLink>
             <NavLink
+              to="/service"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Services
+            </NavLink>
+            <NavLink
               to="/career"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
@@ -107,6 +113,15 @@ const Header = () => {
                       height="18"
                     />
                     Home
+                  </NavLink>
+                  <NavLink to="/service" onClick={toggleModal}>
+                    <img
+                      src="../../../../media/icons/puzzle.svg"
+                      alt="Services"
+                      width="18"
+                      height="18"
+                    />
+                    Services
                   </NavLink>
                   <NavLink to="/career" onClick={toggleModal}>
                     <img

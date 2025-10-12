@@ -15,7 +15,7 @@
     border-radius: 4px;
     align-items: flex-start;
 
-    img {
+    .grid-img {
       object-fit: contain;
       box-sizing: border-box;
       width: 74px;
@@ -55,7 +55,7 @@
       transform: translateY(-20%) rotate(15deg);
     }
 
-    img {
+    .grid-img {
       width: 64px;
       height: 64px;
 

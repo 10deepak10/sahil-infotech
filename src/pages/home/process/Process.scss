@@ -21,7 +21,11 @@
     border-radius: 4px;
     background-color: #fff;
 
-    img {
+    img,
+    .fallback-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       object-fit: contain;
       box-sizing: border-box;
       width: 74px;
@@ -30,12 +34,16 @@
       background: aliceblue;
       border-radius: 99px;
       overflow: visible;
+      font-size: 24px;
+      color: #091678;
+      font-weight: bolder;
     }
   }
 
   .card-flow {
     display: flex;
     align-items: center;
+    min-width: 100px;
 
     img {
       object-fit: contain;
@@ -65,16 +73,17 @@
 
   .process_wrapper {
     .process_card {
-      position: relative; 
+      position: relative;
       width: unset;
       align-items: flex-start;
-      background-color: transparent; 
+      background-color: transparent;
       overflow: hidden;
-      .text{
+
+      .text {
         text-align: left;
 
       }
-    
+
       &::before {
         content: '';
         position: absolute;
@@ -86,11 +95,12 @@
         background-repeat: no-repeat;
         background-position: top right;
         background-size: 50%;
-        opacity: 0.05; 
+        opacity: 0.05;
         filter: grayscale(1);
         transform: translateY(-20%) rotate(15deg);
       }
-      p{
+
+      p {
         text-align: left;
       }
 
