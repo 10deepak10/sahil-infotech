@@ -205,7 +205,7 @@ export default function Contact() {
                 </a>
 
                 <a
-                  href="https://maps.app.goo.gl/BimHPaHaiVv9N5ZG7"
+                  href="https://maps.app.goo.gl/Nm1UxaMKeAPGe7oW9"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="contact-card flex"
