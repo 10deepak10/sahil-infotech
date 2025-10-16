@@ -49,8 +49,17 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="../../../../media/icons/instagram.svg" alt="facebook" />
+            <img src="../../../../media/icons/instagram.svg" alt="instagram" />
             Instagram
+          </a>
+          <a
+            className="social-links"
+            href="https://www.threads.com/sahil_infotech"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="../../../../media/icons/threads.svg" alt="thread" />
+            Thread
           </a>
           {/* <a href="#" target="_blank" rel="noopener noreferrer">
             Upwork
@@ -72,6 +81,15 @@ const Footer = () => {
           >
             <img src="../../../../media/icons/linkedin.svg" alt="facebook" />
             Linkedin
+          </a>
+          <a
+            className="social-links"
+            href="https://x.com/sahilinfotech"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="../../../../media/icons/x.svg" alt="x" />
+            twitter
           </a>
         </div>
         <div className="footer-item">

@@ -207,14 +207,14 @@ div#root {
   white-space: nowrap;
   border-radius: 12px;
   height: 40px;
-  width: 122px;
+  max-width: fit-content;
   cursor: pointer;
   padding: 20px;
   box-sizing: border-box;
   transition: all 0.3s ease-in-out;
   img {
     margin-left: 5px;
-    transition: filter 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   &:hover.btn-white {
     color: #fff;
@@ -235,6 +235,15 @@ div#root {
       img {
         filter: unset;
       }
+    }
+  }
+    &.btn-border {
+    background: #ffffff;
+    color: #091678;
+    border-color: #091678;
+    &:hover {
+      color: #ffffff;
+      background: #091678;
     }
   }
 }

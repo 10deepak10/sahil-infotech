@@ -453,7 +453,7 @@
       "automation"
     ],
 
-    "title": "AI Services",
+    "title": "AI",
     "img": "/media/icons/ai.svg",
     "description": "Supercharge your business with our AI-powered solutions, driving intelligent automation, game-changing insights, and innovative strategies that enhance efficiency, fuel growth, and transform your future success.",
     "detail": {
@@ -592,7 +592,7 @@
       "continuous delivery"
     ],
 
-    "title": "DevOps Services",
+    "title": "DevOps",
     "img": "/media/icons/infinity.svg",
     "description": "Revolutionize your workflows with our advanced DevOps services, driving seamless automation, continuous integration, and scalable infrastructure that boosts efficiency, accelerates delivery, and ensures transformative business growth.",
     "detail": {
@@ -853,6 +853,459 @@
         {
           "q": "How do you ensure the security of the testing process?",
           "a": "We follow best practices in data security, including secure handling of sensitive information, access controls, and compliance with industry standards to protect your data during the testing process."
+        }
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "key": "mobile-app-development",
+    "keywords": [
+      "mobile app development",
+      "android app development",
+      "ios app development",
+      "cross-platform apps",
+      "flutter development",
+      "react native development",
+      "hybrid app development",
+      "mobile UI/UX design",
+      "custom mobile apps"
+    ],
+    "title": "Mobile App Development",
+    "img": "/media/icons/coding.svg",
+    "description": "Transform your ideas into powerful, user-centric mobile applications with our expert mobile app development services — delivering high performance, stunning design, and seamless functionality across Android, iOS, and cross-platform devices.",
+    "detail": {
+      "information": [
+        {
+          "id": 1,
+          "title": "Custom Mobile App Development Services",
+          "description": "In the digital-first world, mobile applications play a critical role in business growth and customer engagement. Our mobile app development services are designed to help startups and enterprises create scalable, secure, and engaging mobile experiences that align perfectly with their business goals.",
+          "tag": "Empowering Businesses Through Innovation",
+          "img": "../../../../media/images/app-develop.png"
+        },
+        {
+          "id": 2,
+          "title": "Building Mobile Experiences That Matter",
+          "description": "We specialize in crafting custom mobile solutions — from idea to deployment — ensuring your app not only functions flawlessly but also delivers an exceptional user experience. Whether it's native, hybrid, or cross-platform, our development approach guarantees speed, scalability, and style.",
+          "tag": "From Concept to Customer Delight",
+          "img": "../../../../media/images/android-development.png",
+          "points": [
+            "Custom Android & iOS app development",
+            "Cross-platform solutions using Flutter & React Native",
+            "Intuitive UI/UX design focused on user engagement",
+            "Seamless API and third-party integrations",
+            "Agile development process with transparent communication",
+            "Rigorous testing for performance and security",
+            "Post-launch support and maintenance"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Your Vision, Our Expertise",
+          "description": "Whether you’re looking to build a mobile solution from scratch or enhance an existing one, our team of skilled developers and designers are ready to bring your vision to life. Let’s collaborate to create mobile experiences that not only meet but exceed user expectations.",
+          "tag": "Turning Ideas into Engaging Digital Products",
+          "img": "../../../../media/images/app-development.jpg"
+        }
+      ],
+      "process": [
+        {
+          "step": 1,
+          "title": "Discovery & Strategy",
+          "description": "We begin by understanding your business objectives, target audience, and desired functionalities. This helps us define a clear app strategy and roadmap tailored to your goals."
+        },
+        {
+          "step": 2,
+          "title": "UI/UX Design",
+          "description": "Our design team creates intuitive, visually appealing interfaces that ensure seamless user interactions and deliver outstanding user experiences."
+        },
+        {
+          "step": 3,
+          "title": "App Development",
+          "description": "Using modern frameworks and technologies, our developers build robust, scalable mobile apps with clean, maintainable code and optimized performance."
+        },
+        {
+          "step": 4,
+          "title": "Testing & Quality Assurance",
+          "description": "Before deployment, we perform rigorous functional, usability, and performance testing to ensure your app runs flawlessly across all devices and platforms."
+        },
+        {
+          "step": 5,
+          "title": "Deployment & Support",
+          "description": "Once your app is tested and approved, we handle deployment to the App Store and Google Play. We also provide post-launch monitoring, updates, and maintenance."
+        }
+      ],
+      "services": {
+        "description": "Our mobile app development services cover every aspect of the app lifecycle — from strategy and design to development, deployment, and ongoing support. We build custom, scalable, and future-ready mobile solutions for diverse industries.",
+        "list": [
+          {
+            "id": 1,
+            "title": "Android App Development",
+            "description": "We create high-performance Android applications optimized for speed, usability, and compatibility across a wide range of devices."
+          },
+          {
+            "id": 2,
+            "title": "iOS App Development",
+            "description": "Our team builds sleek and secure iOS applications designed to deliver a seamless experience on all Apple devices."
+          },
+          {
+            "id": 3,
+            "title": "Cross-Platform App Development",
+            "description": "Using frameworks like Flutter and React Native, we build apps that run smoothly on both Android and iOS, saving time and cost."
+          },
+          {
+            "id": 4,
+            "title": "Hybrid App Development",
+            "description": "We combine the best of native and web technologies to create hybrid apps that offer excellent performance and flexibility."
+          },
+          {
+            "id": 5,
+            "title": "Mobile UI/UX Design",
+            "description": "Our designers craft visually stunning and intuitive interfaces that enhance user engagement and retention."
+          },
+          {
+            "id": 6,
+            "title": "App Maintenance & Support",
+            "description": "We offer continuous monitoring, updates, and technical support to keep your app secure, up-to-date, and performing optimally."
+          }
+        ]
+      },
+      "faq": [
+        {
+          "q": "What platforms do you develop mobile apps for?",
+          "a": "We develop mobile applications for Android, iOS, and cross-platform frameworks such as Flutter and React Native, ensuring broad device compatibility."
+        },
+        {
+          "q": "Do you provide UI/UX design for mobile apps?",
+          "a": "Yes, we have a dedicated UI/UX design team that focuses on creating intuitive, user-friendly interfaces that align with your brand and user goals."
+        },
+        {
+          "q": "What is your mobile app development process?",
+          "a": "Our process includes discovery & strategy, UI/UX design, app development, testing & quality assurance, and deployment with ongoing support."
+        },
+        {
+          "q": "How long does it take to build a mobile app?",
+          "a": "The timeline depends on the app's complexity, features, and platform requirements. Typically, it ranges from 8 to 16 weeks for full development."
+        },
+        {
+          "q": "Can you develop both Android and iOS apps simultaneously?",
+          "a": "Yes, with cross-platform frameworks like Flutter and React Native, we can develop apps that work seamlessly across both Android and iOS."
+        },
+        {
+          "q": "Do you offer post-launch maintenance and updates?",
+          "a": "Absolutely. We provide ongoing maintenance, feature updates, and optimization to keep your app relevant and high-performing."
+        },
+        {
+          "q": "Can you integrate third-party APIs and services?",
+          "a": "Yes, we specialize in integrating payment gateways, social media logins, analytics, maps, and other third-party APIs for enhanced functionality."
+        }
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "key": "hire-resources",
+    "keywords": [
+      "hire developers",
+      "dedicated developers",
+      "remote developers",
+      "hire web developers",
+      "hire mobile app developers",
+      "hire frontend developers",
+      "hire backend developers",
+      "dedicated software team",
+      "staff augmentation services"
+    ],
+    "title": "Hire Dedicated Resources",
+    "img": "/media/icons/hr.svg",
+    "description": "Scale your team effortlessly with our dedicated resource hiring services. Hire skilled developers, designers, and QA experts who work exclusively on your projects, delivering efficiency, flexibility, and faster time-to-market.",
+    "detail": {
+      "information": [
+        {
+          "id": 1,
+          "title": "Hire Top-Tier Dedicated Developers",
+          "description": "In an ever-evolving tech landscape, having the right team can make all the difference. Our 'Hire Dedicated Resources' model enables you to onboard experienced professionals who seamlessly integrate into your workflows, helping you scale projects faster without compromising on quality.",
+          "tag": "Your Team, Your Way",
+          "img": "../../../../media/images/what-is-human-resources.png"
+
+        },
+        {
+          "id": 2,
+          "title": "Flexible Hiring Models for Every Need",
+          "description": "Whether you need a single developer or a complete development team, we offer flexible engagement models tailored to your project requirements. Our resources work exclusively for you — following your processes, time zone, and communication style.",
+          "tag": "Scale Smart. Deliver Faster.",
+          "img": "../../../../media/images/HR-departments.png",
+          "points": [
+            "Access to a diverse pool of skilled professionals",
+            "Flexible hourly, part-time, or full-time hiring models",
+            "Skilled in modern technologies and agile methodologies",
+            "Work in your time zone and communicate directly",
+            "100% transparency with progress tracking",
+            "Quick onboarding with zero overhead",
+            "Continuous performance monitoring and reporting"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Empower Your Business with the Right Talent",
+          "description": "Our pool of vetted developers and tech specialists ensures that you get the expertise you need — when you need it. We handle recruitment, HR, payroll, and infrastructure so you can focus on growing your business without operational hassles.",
+          "tag": "Building Teams That Build Your Success",
+          "img": "../../../../media/images/hr-info.jpg"
+        }
+      ],
+      "process": [
+        {
+          "step": 1,
+          "title": "Requirement Analysis",
+          "description": "We begin by understanding your business needs, required skill sets, project goals, and preferred working model to identify the best-fit resources."
+        },
+        {
+          "step": 2,
+          "title": "Talent Shortlisting",
+          "description": "Our recruitment specialists shortlist top candidates from our pool of pre-vetted professionals who match your technical and cultural requirements."
+        },
+        {
+          "step": 3,
+          "title": "Interview & Selection",
+          "description": "You interview the shortlisted candidates directly to ensure the right fit for your project’s objectives and team culture."
+        },
+        {
+          "step": 4,
+          "title": "Onboarding & Kick-off",
+          "description": "Once selected, the resource is onboarded quickly and integrated into your processes, tools, and communication channels."
+        },
+        {
+          "step": 5,
+          "title": "Ongoing Support & Management",
+          "description": "We provide continued HR, IT, and project management support, ensuring consistent productivity and satisfaction throughout the engagement."
+        }
+      ],
+      "services": {
+        "description": "Our 'Hire Resources' service provides you with dedicated professionals across multiple domains, empowering you to scale your development capabilities efficiently and cost-effectively.",
+        "list": [
+  {
+    "id": 1,
+    "title": "Hire Frontend Developers",
+    "description": "Bring your designs to life with expert Angular, React, or Vue developers who build responsive, high-performing web interfaces."
+  },
+  {
+    "id": 2,
+    "title": "Hire Backend Developers",
+    "description": "Get scalable and secure backend solutions built by developers skilled in Node.js, Python, Java, PHP, and more."
+  },
+  {
+    "id": 3,
+    "title": "Hire Mobile App Developers",
+    "description": "Build cross-platform or native mobile apps with Flutter, React Native, iOS, and Android experts."
+  },
+  {
+    "id": 4,
+    "title": "Hire Full Stack Developers",
+    "description": "Accelerate development with versatile full-stack engineers proficient in frontend, backend, and DevOps technologies."
+  },
+  {
+    "id": 5,
+    "title": "Hire UI/UX Designers",
+    "description": "Engage skilled designers who create user experiences that are intuitive, accessible, and visually appealing."
+  },
+  {
+    "id": 6,
+    "title": "Hire QA Engineers",
+    "description": "Ensure product excellence with manual and automated testing experts dedicated to maintaining top-notch quality."
+  },
+  {
+    "id": 7,
+    "title": "Hire Project Managers",
+    "description": "Experienced project managers who ensure deadlines are met, goals are achieved, and communication flows smoothly."
+  },
+  {
+    "id": 8,
+    "title": "Hire DevOps Engineers",
+    "description": "Streamline your deployment pipeline with DevOps professionals skilled in CI/CD, AWS, Azure, Docker, and Kubernetes."
+  },
+  {
+    "id": 9,
+    "title": "Hire AI/ML Engineers",
+    "description": "Leverage artificial intelligence and machine learning to enhance automation, analytics, and decision-making capabilities."
+  }
+]
+
+      },
+      "faq": [
+        {
+          "q": "Why should I hire resources from Sahil Infotech?",
+          "a": "Hiring resources from Sahil Infotech offers you access to a diverse pool of highly skilled professionals with extensive expertise in various technologies and domains."
+        },
+        {
+          "q": "What is the 'Hire Dedicated Resources' model?",
+          "a": "It’s a flexible engagement model where you can hire full-time, part-time, or hourly professionals who work exclusively on your projects as an extension of your in-house team."
+        },
+        {
+          "q": "What types of resources can I hire?",
+          "a": "You can hire developers, designers, testers, DevOps engineers, project managers, and other IT specialists based on your project requirements."
+        },
+        {
+          "q": "How do you ensure the quality of the resources?",
+          "a": "All our professionals undergo a multi-level screening process, technical evaluation, and background verification to ensure top quality and reliability."
+        },
+        {
+          "q": "Can I manage the hired resources directly?",
+          "a": "Yes, you have full control over the hired resources — including task assignments, communication, and performance evaluation."
+        },
+        {
+          "q": "What engagement models do you offer?",
+          "a": "We offer flexible engagement options including hourly, part-time, and full-time models depending on your project duration and budget."
+        },
+        {
+          "q": "Do you provide replacement if a resource doesn’t fit?",
+          "a": "Absolutely. In the rare case a resource isn’t the right fit, we provide a suitable replacement quickly without affecting project timelines."
+        },
+        {
+          "q": "What are the benefits of hiring dedicated developers?",
+          "a": "You gain access to skilled talent, faster delivery, reduced overhead costs, greater flexibility, and full control over project execution."
+        }
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "key": "saas-solutions",
+    "keywords": [
+      "saas development",
+      "software as a service",
+      "cloud application development",
+      "multi-tenant architecture",
+      "custom saas platforms",
+      "saas product development",
+      "saas maintenance",
+      "cloud migration",
+      "subscription-based software"
+    ],
+    "title": "SaaS Solutions",
+    "img": "/media/icons/sass.svg",
+    "description": "Empower your business with scalable, secure, and high-performance SaaS solutions. We design, develop, and maintain cloud-based products that help you innovate faster, reduce costs, and deliver seamless experiences to your users worldwide.",
+    "detail": {
+      "information": [
+        {
+          "id": 1,
+          "title": "Scalable SaaS Development Services",
+          "description": "In today’s digital ecosystem, Software as a Service (SaaS) has become the backbone of modern business models. Our end-to-end SaaS development services empower startups and enterprises to build, launch, and scale cloud-based applications that drive innovation and long-term growth.",
+          "tag": "Transforming Ideas into Scalable Cloud Solutions",
+          "img": "../../../../media/images/SaaS-Business-Model.jpg"
+        },
+        {
+          "id": 2,
+          "title": "End-to-End SaaS Product",
+          "description": "From ideation to deployment, we handle every aspect of SaaS product development with precision. Our team leverages the latest technologies and frameworks to deliver multi-tenant, secure, and high-performance SaaS applications tailored to your business goals.",
+          "tag": "From Concept to Cloud-Ready Solution",
+          "img": "../../../../media/images/bg-SaaS.jpg",
+          "points": [
+            "Custom SaaS platform design and development",
+            "Multi-tenant architecture with scalability in mind",
+            "API integration and third-party service connectivity",
+            "Subscription management and payment gateway integration",
+            "Data analytics, reporting, and dashboard solutions",
+            "Continuous deployment and CI/CD automation",
+            "Cloud hosting and ongoing performance optimization"
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Cloud-First Approach for Modern Businesses",
+          "description": "Our cloud-native SaaS solutions ensure that your applications remain secure, scalable, and always available. Whether you're building a new SaaS product or modernizing an existing one, we’ll help you achieve faster time-to-market with reduced infrastructure costs.",
+          "tag": "Building the Future, One Cloud at a Time",
+          "img": "../../../../media/images/Software-as-a-Service-saas.jpg"
+        }
+      ],
+      "process": [
+        {
+          "step": 1,
+          "title": "Discovery & Requirement Analysis",
+          "description": "We collaborate closely with your team to understand business objectives, define core features, and outline a roadmap for your SaaS product development."
+        },
+        {
+          "step": 2,
+          "title": "Architecture Design & Prototyping",
+          "description": "Our architects design a secure, multi-tenant architecture ensuring scalability, data isolation, and performance efficiency. We also create interactive prototypes to validate functionality."
+        },
+        {
+          "step": 3,
+          "title": "SaaS Application Development",
+          "description": "Using modern technologies and agile methodology, we develop your SaaS product — focusing on scalability, modularity, and security from the ground up."
+        },
+        {
+          "step": 4,
+          "title": "Testing & Quality Assurance",
+          "description": "We perform comprehensive testing — including functionality, load, and security testing — to ensure the SaaS product runs flawlessly across all environments."
+        },
+        {
+          "step": 5,
+          "title": "Deployment & Ongoing Maintenance",
+          "description": "After deployment, we monitor performance, handle version updates, manage subscriptions, and ensure high availability with 24/7 support."
+        }
+      ],
+      "services": {
+        "description": "We provide complete SaaS development and management services — from concept to continuous delivery. Our team ensures that your SaaS application is secure, scalable, user-friendly, and ready for global deployment.",
+        "list": [
+          {
+            "id": 1,
+            "title": "Custom SaaS Application Development",
+            "description": "We build tailor-made SaaS solutions designed to address your unique business challenges and user needs."
+          },
+          {
+            "id": 2,
+            "title": "Multi-Tenant Architecture Design",
+            "description": "Our team creates scalable architectures that allow multiple clients to securely share a single application instance."
+          },
+          {
+            "id": 3,
+            "title": "Cloud Migration Services",
+            "description": "We help you migrate legacy applications to the cloud, optimizing them for performance, cost, and scalability."
+          },
+          {
+            "id": 4,
+            "title": "API Development & Integration",
+            "description": "Seamlessly connect your SaaS application with third-party services, payment gateways, and enterprise systems through robust APIs."
+          },
+          {
+            "id": 5,
+            "title": "SaaS UI/UX Design",
+            "description": "We craft intuitive and engaging user interfaces that ensure a smooth and enjoyable experience for end users."
+          },
+          {
+            "id": 6,
+            "title": "SaaS Maintenance & Support",
+            "description": "Our team provides ongoing updates, monitoring, and technical support to ensure your SaaS product stays reliable and up-to-date."
+          }
+        ]
+      },
+      "faq": [
+        {
+          "q": "What is SaaS development?",
+          "a": "SaaS development involves creating cloud-based software applications that users can access via the internet on a subscription basis. It includes everything from planning and design to deployment and maintenance."
+        },
+        {
+          "q": "What technologies do you use for SaaS development?",
+          "a": "We use modern technologies like Node.js, Python, Angular, React, AWS, Azure, Docker, Kubernetes, and microservice-based architectures to build scalable and secure SaaS products."
+        },
+        {
+          "q": "Can you migrate my existing software to a SaaS model?",
+          "a": "Yes, we specialize in cloud migration and re-engineering legacy systems into SaaS applications while preserving functionality and enhancing scalability."
+        },
+        {
+          "q": "How do you ensure data security in SaaS applications?",
+          "a": "We implement industry best practices including encryption, role-based access control, secure APIs, GDPR compliance, and continuous security monitoring."
+        },
+        {
+          "q": "What are the key benefits of a SaaS solution?",
+          "a": "SaaS solutions reduce infrastructure costs, improve scalability, enable remote accessibility, simplify updates, and provide a predictable subscription-based revenue model."
+        },
+        {
+          "q": "Do you provide ongoing maintenance and support for SaaS products?",
+          "a": "Absolutely. We provide continuous monitoring, updates, performance optimization, and technical support to ensure smooth operation post-launch."
+        },
+        {
+          "q": "Can you integrate third-party services or APIs into SaaS applications?",
+          "a": "Yes, we integrate payment gateways, analytics tools, CRMs, and other third-party services to enhance your SaaS platform’s functionality."
         }
       ]
     }

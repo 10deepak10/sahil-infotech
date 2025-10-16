@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "aos/dist/aos.css";
 import "./Header.scss";
 
@@ -8,6 +9,10 @@ const Header = () => {
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
+  };
+  const navigate = useNavigate();
+  const handleNavigate = (path: string) => {
+    navigate(path);
   };
 
   return (
@@ -42,14 +47,20 @@ const Header = () => {
             >
               Career
             </NavLink>
-            <NavLink
+            {/* <NavLink
               to="/contact"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               Contact
-            </NavLink>
+            </NavLink> */}
+             <button className="cta-btn" onClick={() => handleNavigate('Contact')}>
+              Book Free Consultation
+            </button>
+             <button className="cta-btn btn-border" onClick={() => handleNavigate('apply-for-job')}>
+              Apply for Job
+            </button>
           </ul>
-          <ul className="gap-12 for_desktop">
+          {/* <ul className="gap-12 for_desktop">
             <li className="call menu_btns">
               <a
                 href="tel:+919016738858"
@@ -80,7 +91,7 @@ const Header = () => {
                 />
               </a>
             </li>
-          </ul>
+          </ul> */}
           <span className="for_mobile" onClick={toggleModal}>
             <img
               src="media/icons/hamburger.svg"

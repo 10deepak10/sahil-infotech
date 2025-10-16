@@ -5,6 +5,8 @@ import { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import Banner from "../../components/Banner/Banner";
 import Dropdown from "../../components/dropdown/Dropdown";
+import DefaultContactBox from "../../components/defaultContactBox/DefaultContactBox";
+import Perk from "../career/perk/Perk";
 
 type ButtonState = "idle" | "sending" | "failed" | "success";
 
@@ -23,8 +25,7 @@ const JobForm = () => {
   if (queryTitle) {
     const foundByTitle = jobsData.find(
       (j) =>
-        j.title.toLowerCase().replace(/\s+/g, "-") ===
-        queryTitle.toLowerCase()
+        j.title.toLowerCase().replace(/\s+/g, "-") === queryTitle.toLowerCase()
     );
     if (foundByTitle) {
       initialJob = foundByTitle;
@@ -43,10 +44,9 @@ const JobForm = () => {
       const currentId = Number(id);
       const slugTitle = selectedJob.title.replace(/\s+/g, "-").toLowerCase();
       if (selectedJob.id !== currentId || queryTitle !== slugTitle) {
-        navigate(
-          `/apply-for/${selectedJob.id}?title=${slugTitle}`,
-          { replace: true }
-        );
+        navigate(`/apply-for-job/${selectedJob.id}?title=${slugTitle}`, {
+          replace: true,
+        });
       }
     }
   }, [selectedJob, id, queryTitle, navigate]);
@@ -217,7 +217,7 @@ const JobForm = () => {
 
       <div className="container mob-reverse my-10 flex-row align-start wrap">
         {/* Left Side - Job Details */}
-        {selectedJob && (
+        {selectedJob ? (
           <div className="job-details">
             {selectedJob.keySkills?.length > 0 && (
               <div className="job-keyskills">
@@ -252,13 +252,15 @@ const JobForm = () => {
               </div>
             )}
           </div>
+        ) : (
+          <DefaultContactBox />
         )}
 
         {/* Right Side - Form */}
-        <div>
-          <form className="apply-form" ref={formRef} onSubmit={handleSubmit}>
+        <div className="flex-1" >
+          <form className="apply-form" ref={formRef} onSubmit={handleSubmit} data-aos="fade-left">
             <div className="flex-row">
-              <div>
+              <div className="flex-1">
                 <input
                   type="text"
                   name="firstName"
@@ -269,7 +271,7 @@ const JobForm = () => {
                   <p className="error-text">{formErrors.firstName}</p>
                 )}
               </div>
-              <div>
+              <div className="flex-1">
                 <input
                   type="text"
                   name="lastName"
@@ -283,7 +285,7 @@ const JobForm = () => {
             </div>
 
             <div className="flex-row">
-              <div>
+              <div className="flex-1">
                 <input
                   type="email"
                   name="email"
@@ -294,7 +296,7 @@ const JobForm = () => {
                   <p className="error-text">{formErrors.email}</p>
                 )}
               </div>
-              <div>
+              <div className="flex-1">
                 <input
                   type="tel"
                   name="mobile"
@@ -315,7 +317,7 @@ const JobForm = () => {
 
             {/* Extra Job Form Fields */}
             <div className="flex-row">
-              <div>
+              <div className="flex-1">
                 <input
                   type="text"
                   name="experience"
@@ -326,7 +328,7 @@ const JobForm = () => {
                   <p className="error-text">{formErrors.experience}</p>
                 )}
               </div>
-              <div>
+              <div className="flex-1">
                 <input
                   type="text"
                   name="currentCTC"
@@ -340,7 +342,7 @@ const JobForm = () => {
             </div>
 
             <div className="flex-row">
-              <div>
+              <div className="flex-1">
                 <input
                   type="text"
                   name="expectedCTC"
@@ -351,7 +353,7 @@ const JobForm = () => {
                   <p className="error-text">{formErrors.expectedCTC}</p>
                 )}
               </div>
-              <div>
+              <div className="flex-1">
                 <input
                   type="text"
                   name="noticePeriod"
@@ -418,6 +420,7 @@ const JobForm = () => {
           </form>
         </div>
       </div>
+      <Perk />
     </>
   );
 };

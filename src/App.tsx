@@ -64,7 +64,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/career" element={<Career />} />
           <Route path="/job-detail/:id/:slug" element={<JobDetail />} />
-          <Route path="/apply-for/:id?" element={<JobForm />} />
+          <Route path="/apply-for-job/:id?" element={<JobForm />} />
           <Route path="/service" element={<Service />} />
           <Route path="/service/:title" element={<ServiceDetail />} />
           {/* <Route path="/portfolio" element={<Portfolio />} /> */}

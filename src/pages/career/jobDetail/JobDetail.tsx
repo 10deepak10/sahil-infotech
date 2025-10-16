@@ -10,7 +10,7 @@ const JobDetail = () => {
 
   const handleNavigate = (id: string | number, title: string) => {
   const slug = title.toLowerCase().replace(/[\s/]+/g, "-");
-  navigate(`/apply-for/${id}?title=${slug}`);
+  navigate(`/apply-for-job/${id}?title=${slug}`);
 };
 
 

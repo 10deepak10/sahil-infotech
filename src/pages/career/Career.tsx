@@ -114,7 +114,7 @@ const Career = () => {
           </ul>
           <button
             className="cta-btn"
-            onClick={() => handleNavigate("/contact")}
+            onClick={() => handleNavigate("/apply-for-job")}
           >
             Contact Us
             <img
