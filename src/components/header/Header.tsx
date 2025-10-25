@@ -21,7 +21,7 @@ const Header = () => {
         <NavLink to="/">
           <img
             className="logo"
-            src="media/logo.png"
+            src="../../../../media/logo.png"
             alt="logo"
             width="172"
             height="54"
@@ -69,7 +69,7 @@ const Header = () => {
                 className="flex j-center"
               >
                 <img
-                  src="media/icons/call.svg"
+                  src="../../../../media/icons/call.svg"
                   alt="call"
                   width="24"
                   height="24"
@@ -84,7 +84,7 @@ const Header = () => {
                 className="flex j-center"
               >
                 <img
-                  src="media/icons/sms.svg"
+                  src="../../../../media/icons/sms.svg"
                   alt="sms"
                   width="24"
                   height="24"
@@ -94,7 +94,7 @@ const Header = () => {
           </ul> */}
           <span className="for_mobile" onClick={toggleModal}>
             <img
-              src="media/icons/hamburger.svg"
+              src="../../../../media/icons/hamburger.svg"
               alt="menu"
               width="20"
               height="20"

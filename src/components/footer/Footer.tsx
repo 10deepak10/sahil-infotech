@@ -89,7 +89,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <img src="../../../../media/icons/x.svg" alt="x" />
-            twitter
+            Twitter
           </a>
         </div>
         <div className="footer-item">

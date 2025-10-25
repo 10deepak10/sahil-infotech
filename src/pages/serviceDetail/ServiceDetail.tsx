@@ -54,7 +54,7 @@ const ServiceDetail: React.FC = () => {
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={seoDescription} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={selectedService.detail?.information[0]?.img || "/media/hero-bg.png"} />
+        <meta property="og:image" content={selectedService.detail?.information[0]?.img || "/media/logo.png"} />
         <link rel="canonical" href={window.location.href} />
       </Helmet>
 
