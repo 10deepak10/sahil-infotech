@@ -1,46 +1,83 @@
-# Getting Started with Create React App
+# Sahil Infotech - Digital Agency Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Sahil Infotech Banner](/public/media/hero-bg.png)
 
-## Available Scripts
+A modern, high-performance portfolio website for **Sahil Infotech**, a digital agency specializing in Web Development, Mobile Apps, and E-commerce solutions. Built with **React** and **TypeScript**, this project showcases the agency's expertise through interactive case studies, service details, and a seamless user experience.
 
-In the project directory, you can run:
+**Live Demo:** [https://www.sahilinfotech.com](https://www.sahilinfotech.com)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
+## Tech Stack
+
+-   **Frontend:** React.js, TypeScript
+-   **Styling:** SCSS / SASS (Modular architecture)
+-   **Routing:** React Router v6
+-   **SEO:** React Helmet Async (Dynamic Meta Tags, Open Graph, Twitter Cards)
+-   **Animations:** AOS (Animate On Scroll)
+-   **Sliders:** Swiper.js
+-   **Forms:** EmailJS integration
+
+---
+
+## Key Features
+
+-   **Dynamic Portfolio:** Filterable project showcase (Web, E-commerce, Mobile) using specific tags.
+-   **Detailed Case Studies:** Deep-dive pages for each project with custom slugs (e.g., `/portfolio/free-fuse`), responsive banner images (using `<picture>` for mobile optimization), and rich tech stack details.
+-   **Social Sharing:** Fully optimized for social media with dynamic Open Graph and Twitter Card meta tags (cache-busted images).
+-   **Responsive Design:** Mobile-first approach ensuring perfect rendering across all devices.
+-   **SEO Optimized:** Semantic HTML, correct heading hierarchy, and dynamic metadata for better search engine visibility.
+-   **Career & Services:** Dedicated sections for job listings and detailed service descriptions.
+
+---
+
+## Getting Started
+
+To run this project locally:
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/sahilinfotech/portfolio.git
+cd sahil-infotech
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Run development server
+```bash
+npm start
+```
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 4. Build for production
+```bash
+npm run build
+```
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Structure
 
-### `npm run build`
+```bash
+sahil-infotech/
+├── public/              # Static assets (images, icons, social banners)
+├── src/
+│   ├── components/      # Reusable UI components (Footer, GridBlock, etc.)
+│   ├── db/              # Static data files (portfolioData.ts, services.json)
+│   ├── pages/           # Page components (Home, Portfolio, Contact, Career)
+│   ├── styles/          # Global styles & mixins
+│   └── App.tsx          # Main application & routing logic
+└── package.json         # Dependencies & scripts
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contact
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+-   **Website:** [www.sahilinfotech.com](https://www.sahilinfotech.com)
+-   **Email:** info@sahilinfotech.com
+-   **Phone:** +91 90167-38858
+-   **Socials:** [LinkedIn](https://www.linkedin.com/company/sahil-infotech/) | [Instagram](https://www.instagram.com/sahil_infotech/)
