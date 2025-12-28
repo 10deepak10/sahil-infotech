@@ -33,7 +33,13 @@ const Header = () => {
               to="/"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
-              Home
+              Home  
+            </NavLink>
+            <NavLink
+              to="/portfolio"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Portfolio
             </NavLink>
             <NavLink
               to="/service"
@@ -124,6 +130,15 @@ const Header = () => {
                       height="18"
                     />
                     Home
+                  </NavLink>
+                  <NavLink to="/portfolio" onClick={toggleModal}>
+                    <img
+                      src="../../../../media/icons/portfolio.svg"
+                      alt="portfolio"
+                      width="18"
+                      height="18"
+                    />
+                    Portfolio
                   </NavLink>
                   <NavLink to="/service" onClick={toggleModal}>
                     <img

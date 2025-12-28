@@ -34,7 +34,7 @@ const JobDetail = () => {
 
   return (
     <>
-      {/* ✅ SEO Metadata + JobPosting Schema */}
+      {/*  SEO Metadata + JobPosting Schema */}
       <Helmet>
         <title>{`${job.title} | Careers at Sahil Infotech`}</title>
         <meta
@@ -43,6 +43,20 @@ const JobDetail = () => {
             ", "
           )}.`}
         />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content={`${job.title} | Careers at Sahil Infotech`} />
+        <meta property="og:description" content={`Apply now for ${job.title}. Location: ${job.location}. Skills: ${job.skills.join(", ")}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={window.location.href} />
+        <meta property="og:image" content={`${window.location.origin}/media/banner/job-default-banner.png?v=1`} />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={window.location.href} />
+        <meta name="twitter:title" content={`${job.title} | Careers at Sahil Infotech`} />
+        <meta name="twitter:description" content={`Apply now for ${job.title}. Location: ${job.location}. Skills: ${job.skills.join(", ")}`} />
+        <meta name="twitter:image" content={`${window.location.origin}/media/banner/job-default-banner.png?v=1`} />
         <link
           rel="canonical"
           href={`https://www.sahilinfotech.com/job-detail/${job.id}/${slug}`}
@@ -88,7 +102,7 @@ const JobDetail = () => {
         </script>
       </Helmet>
 
-      {/* ✅ Page UI */}
+      {/*  Page UI */}
       <div className="job-banner">
         <img
           src={"/media/banner/job-default-banner.png"}

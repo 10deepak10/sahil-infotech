@@ -169,7 +169,7 @@ const JobForm = () => {
         ),
       ])
         .then(() => {
-          setStatus("✅ Application sent successfully!");
+          setStatus(" Application sent successfully!");
           setButtonState("success");
           formRef.current?.reset();
         })
@@ -403,7 +403,7 @@ const JobForm = () => {
             {status && !status.includes("Sending") && (
               <p
                 className={`status-text ${
-                  status.includes("✅") ? "success" : "error"
+                  status.includes("") ? "success" : "error"
                 }`}
               >
                 {status}

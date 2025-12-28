@@ -14,7 +14,7 @@ interface ProcessProps {
 }
 
 const Process: React.FC<ProcessProps> = ({ ourProcess, arrowOrder = [] }) => {
-  // ✅ Detect desktop view
+  //  Detect desktop view
   const [isDesktop, setIsDesktop] = React.useState(false);
 
   React.useEffect(() => {
@@ -24,7 +24,7 @@ const Process: React.FC<ProcessProps> = ({ ourProcess, arrowOrder = [] }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // ✅ Reverse data after 3rd item on desktop
+  //  Reverse data after 3rd item on desktop
   const processedData = React.useMemo(() => {
     if (!isDesktop) return ourProcess;
     const firstHalf = ourProcess.slice(0, 3);
@@ -32,7 +32,7 @@ const Process: React.FC<ProcessProps> = ({ ourProcess, arrowOrder = [] }) => {
     return [...firstHalf, ...secondHalf];
   }, [ourProcess, isDesktop]);
 
-  // ✅ Helper: map symbol → image path
+  //  Helper: map symbol → image path
   const getArrowImage = (symbol: string | undefined) => {
     switch (symbol) {
       case "→":

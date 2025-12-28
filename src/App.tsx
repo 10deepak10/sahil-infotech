@@ -11,6 +11,8 @@ import JobDetail from "./pages/career/jobDetail/JobDetail";
 import JobForm from "./pages/jobForm/JobForm";
 import ServiceDetail from "./pages/serviceDetail/ServiceDetail";
 import Service from "./pages/service/Service";
+import Portfolio from "./pages/portfolio/Portfolio";
+import PortfolioDetail from "./pages/portfolio/PortfolioDetail";
 
 function App() {
   return (
@@ -32,7 +34,7 @@ function App() {
           <meta property="og:image" content="/media/hero-bg.png" />
           <meta property="og:url" content="https://www.sahilinfotech.com" />
 
-          {/* ✅ Organization Structured Data */}
+          {/*  Organization Structured Data */}
           <script type="application/ld+json">
             {JSON.stringify({
               "@context": "https://schema.org",
@@ -67,7 +69,8 @@ function App() {
           <Route path="/apply-for-job/:id?" element={<JobForm />} />
           <Route path="/service" element={<Service />} />
           <Route path="/service/:title" element={<ServiceDetail />} />
-          {/* <Route path="/portfolio" element={<Portfolio />} /> */}
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/portfolio/:slug" element={<PortfolioDetail />} />
           <Route path="*" element={<Home />} />
         </Routes>
         <ScrollToTop />

@@ -27,7 +27,26 @@ const Footer = () => {
           <h4>Company</h4>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/service">Services</NavLink>
-          {/* <Link to="/portfolio">Portfolio</Link> */}
+          <NavLink 
+            to="/portfolio"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            <img 
+              src="../../../../media/icons/portfolio.svg" 
+              alt="portfolio" 
+              width="18" 
+              height="18" 
+              style={{ 
+                marginRight: "8px", 
+                verticalAlign: "middle",
+                width: "18px", 
+                height: "18px", 
+                filter: "none", 
+                mixBlendMode: "normal" 
+              }} 
+            />
+            Portfolio
+          </NavLink>
           <NavLink
             to="/contact"
             className={({ isActive }) => (isActive ? "active" : "")}

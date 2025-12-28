@@ -3,7 +3,7 @@ import "./Dropdown.scss";
 
 
 interface DropdownProps {
-  value?: string;                // ✅ controlled value
+  value?: string;                //  controlled value
   defaultValue?: string;         // fallback for uncontrolled
   data: Data[];
   name: string;

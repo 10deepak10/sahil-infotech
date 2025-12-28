@@ -51,10 +51,21 @@ const ServiceDetail: React.FC = () => {
         <title>{seoTitle}</title>
         <meta name="description" content={seoDescription} />
         <meta name="keywords" content={seoKeywords} />
+        
+        {/* Open Graph / Facebook */}
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={seoDescription} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={selectedService.detail?.information[0]?.img || "/media/logo.png"} />
+        <meta property="og:url" content={window.location.href} />
+        <meta property="og:image" content={selectedService.detail?.information[0]?.img ? `${window.location.origin}${selectedService.detail.information[0].img}?v=1` : `${window.location.origin}/media/logo.png?v=1`} />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={window.location.href} />
+        <meta name="twitter:title" content={seoTitle} />
+        <meta name="twitter:description" content={seoDescription} />
+        <meta name="twitter:image" content={selectedService.detail?.information[0]?.img ? `${window.location.origin}${selectedService.detail.information[0].img}?v=1` : `${window.location.origin}/media/logo.png?v=1`} />
+
         <link rel="canonical" href={window.location.href} />
       </Helmet>
 
